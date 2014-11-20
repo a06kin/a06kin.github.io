@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Aleksandr Anohin",
-    "label": "Programmer",
-    "picture": "",
+    "label": "Software developer",
+    "picture": "http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png",
     "email": "a06kin@gmail.com",
     "phone": "(+371) 26119258",
     "website": "http://www.aan.lv",
-    "summary": "",
+    "summary": "My name is Aleksandr Anohin, and I live in Riga, Latvia. I was born in 1991. I started coding in 2005 on courses 'Progmeistars'. Began with languages such as MS Logo and Free Pascal. Once learned the OOP and Delphi. Next couple of years I raise my programming skills and learn new languages, while not focused on Java. Now I engage in the study of programming in depth. For example algorithms, optimization methods, different programming approaches. ",
     "location": {
       "address": "Imanta",
-      "postalCode": "Lv 1069",
+      "postalCode": "LV-1069",
       "city": "Riga",
       "countryCode": "LV",
       "region": "Latvia"
@@ -24,13 +24,18 @@
         "network": "keybase",
         "username": "aaa",
         "url": "https://keybase.io/aaa"
+      },
+      {
+        "network": "codeschool",
+        "username": "a06kin",
+        "url": "https://www.codeschool.com/users/a06kin"
       }
     ]
   },
   "work": [
       {
       "company": "Apply",
-      "position": "Programmer",
+      "position": "Software developer",
       "website": "http://www.applyit.lv/",
       "startDate": "2014-09-12",
       "summary": "'Apply' strives to be on the leading edge of this technological development by bringing the best and most innovative solutions to our customers. Whether it is a small website or intelligent technology solution, 'Apply' will give their best performance from beginning to end. 'Apply' believes that Artificial Intelligence is becoming the way of the future and we will be a big part of it."
@@ -50,19 +55,11 @@
       "summary": "Computer courses, programming courses."
     },
     {
-      "company": "Autentica",
-      "position": "Programmer",
-      "website": "http://www.autentica.lv/",
-      "startDate": "2014-06-03",
-      "endDate": "2014-09-12",
-      "summary": ""
-    },
-    {
-      "company": "SpecialSolutions",
-      "position": "Programmer",
+      "company": "SpecialSolutions (Autentica since 2014-06-03)",
+      "position": "Software developer",
       "website": "http://www.specialsolutions.lv/",
       "startDate": "2012-01-01",
-      "endDate": "2014-06-03",
+      "endDate": "2014-09-12",
       "summary": "Special Solutions is a stable service provider in the market of Latvia which is oriented mainly to the large enterprises and the state institutions of Latvia. We offer to our clients a full range of IT services beginning from an elaboration of a conception down to implementation and maintenance of the information systems."
     }
   ],
@@ -123,27 +120,133 @@
       "institution": "Optional School for Gifted Children",
       "studyType": "School",
       "other": "(LV - ABFS)",
-      "area": "other",
+      "area": "Other",
       "startDate": "2000-09-01",
       "endDate": "2008-08-31"
     }
   ],
   "skills": [
     {
-      "name": "Programming",
+      "name": "Java",
+      "level": "Master",
       "keywords": [
-        "Java",
-        "C/C++",
-        "Javascript",
-        "CSS",
-        "HTML",
+        "JavaSE{7,8}",
+        "Spring",
+        "Servlets",
+        "Hibernate",
+        "Maven",
+        "Ant",
+        "JRebel",
+        "JUnit",
+        "Jetty",
+        "VisualVM",
+        "Jackson",
+        "JSF",
+        "Grails",
+        "JDeveloper",
+        "Swing",
+        "GWT",
+        "Android",
+        "JDBC",
+        "Joda-Time",
+        "vert.x",
+        "RESTX",
+        "libgdx",
+        "Log4j",
+        "JasperReports",
+        "Jersey",
+        "Tomcat",
+        "WildFly",
+        "Thymeleaf",
+        "Mockito",
+        "Selenium"
+      ]
+    },
+    {
+      "name": "C/C++",
+      "level": "Intermediate",
+      "keywords": [
+        "OpenCV",
+        "Qt",
+        "FFmpeg"
+      ]
+    },
+    {
+      "name": "Javascript",
+      "level": "Intermediate",
+      "keywords": [
+        "AngularJS",
+        "Node.js",
+        "jQuery",
+        "jQuery UI",
+        "D3.js",
+        "Processing.js",
+        "Backbone.js",
+        "Socket.IO",
+        "Underscore.js",
+        "Velocity.js",
+        "Bower",
+        "phantomjs",
+        "casperjs",
+        "mustache.js",
+        "Moment.js"
+      ]
+    },
+    {
+      "name": "HTML/CSS",
+      "level": "Intermediate",
+      "keywords": [
+        "Foundation",
+        "Twitter Bootstrap",
+        "Less Framework",
+        "Skeleton",
+        "Pure",
+        "LESS",
+        "SASS"
+      ]
+    },
+    {
+      "name": "DB",
+      "level": "Intermediate",
+      "keywords": [
+        "Mongo",
+        "SQLite",
+        "PL/SQL",
+        "Oracle Database",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Other",
+      "level": "Master",
+      "keywords": [
+        "Git",
+        "SVN",
+        "REST",
+        "Mustache",
+        "RegExp",
+        "Shell",
+        "Eeoman"
+      ]
+    },
+    {
+      "name": "Programming language",
+      "level": "Beginner",
+      "keywords": [
+        "Ruby/RoR",
+        "PHP",
+        "Objective-C",
         "Pascal",
-        "Delphi"
+        "Delphi",
+        "Dart",
+        "R",
+        "Scala",
+        "Clojure"
       ]
     },
     {
       "name": "OS",
-      "level": "Master",
+      "level": "Intermediate",
       "keywords": [
         "Windows",
         "Linux",
@@ -151,12 +254,24 @@
       ]
     },
     {
-      "name": "Continuous (.*)",
+      "name": "Tools",
       "level": "Master",
       "keywords": [
-        "Jenkins - integration",
-        "SonarQube - inspection of code quality",
-        "Upsource - discuss and review code"
+        "Jenkins",
+        "SonarQube",
+        "Upsource",
+        "SublimeText",
+        "Intellij IDEA",
+        "LightTable",
+        "JIRA",
+        "GitHub",
+        "BitBucket",
+        "Trello",
+        "Asana",
+        "Dashing",
+        "Loggly",
+        "Newrelic",
+        "OpenShift"
       ]
     }
 
@@ -181,21 +296,23 @@
   ],
   "interests": [
     {
-      "name": "Programming",
+      "name": "Dance",
       "keywords": [
-        "Dart",
-        "NodeJS",
-        "OpenCV",
-        "AngularJS",
-        "NoSQL",
-        ""
+        "Salsa",
+        "ChaCha",
+        "Bachata",
+        "Kizomba",
+        "Tango"
       ]
     },
     {
-      "name": "Hardware",
+      "name": "Sport",
       "keywords": [
-        "RPI",
-        "LEAP"
+        "Football",
+        "Volleyball",
+        "Table tennis",
+        "Cue sports",
+        "Roller skates"
       ]
     }
   ]

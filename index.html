@@ -5,277 +5,816 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aleksandr Anohin</title>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <style>
-		body {
-			font-size: 62.5%;
-			font-family: Montserrat;
-			color: #333333;
-		}
-		.picture {
-			border-radius: 50%;
-			margin: 0 auto;
-		}
-		a {
-			color: #333333;
-			text-decoration: none;
-		}
-		a:visited {
-			color: #4e4e4e;
-		}
-		a:hover {
-			color: #4e4e4e;
-			text-decoration: underline;
-		}
-		
-		.header {
-			text-align:center;
-			font-size: 2em;
-			margin-top:1em;
-			margin-left:5%;
-			margin-right:5%;
-		}
-		h1 {
-			font-size:3em;
-			margin-bottom:0;
-		}
-		.profile {
-			font-family: Montserrat;
-			font-size: 1em;
-			margin:0;
-		}
+      .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+  margin-bottom: 10px;
+}
+body {
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+.social-link {
+  margin-left: 5px;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover {
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover {
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover {
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover {
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover {
+  color: #0986ca;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
 
-		.contact-header {
-			font-weight:bold;
-		}
-		.label {
-			margin-top: 0;
-			margin-bottom: 1em;
-		}
-		.fa {
-			font-size:2em;
-		}
-		.left {
-			font-size: 1em;
-		}
-		.main {
-			margin 0 auto;
-			margin-left: 10%;
-			margin-right: 10%;
-			margin-bottom: 50px;
-		}
-		h2 {
-			font-size: 3.5em;
-		}
-		h3 {
-			font-size:2em;
-			margin-bottom:0;
-		}
-		h4 {
-			color: #4e4e4e;
-			font-size:1.5em;
-			margin-top:0;
-		}
-		.skills {
-			margin-bottom: 10px;
-		}
-		p {
-			font-family: 'Open Sans';
-			font-size: 1.5em;
-		}
-		li {
-			font-family: 'Open Sans';
-			font-size: 1.5em;
-		}
-		.keywords {
-			background-color: #333333;
-			color:#fff;
-			padding: 6px;
-			font-size: 1.2em;
-		}
-		blockquote {
-			margin: 2em 10px;
-  			padding: 1em 10px;
-			border-left: 10px solid #edf0f5;
-			font-family: 'Open Sans';
-			font-size: 1.5em;
-		}
-		blockquote .name {
-			font-weight:bold;
-			font-family: "Montserrat";
-		}
-		.responsive-show {
-			display:none;
-		}
-		@media (max-width: 1000px) {
-  			.header {
-    			font-size: 1.66em;
-  			}
-  			h2 {
-  				font-size: 3em;
-  			}
-		}
-		@media (max-width: 500px) {
-			p {
-				font-size:1.2em;
-			}
-			li {
-				font-size:1.2em;
-			}
-			blockquote {
-				font-size:1.2em;
-			}
-			h2 {
-				font-size:2.3em;
-			}
-			.responsive-hidden {
-				display:none;
-				visibility: hidden;
-			}
-			.responsive-show {
-				display:inline;
-				visibility: visible;
-			}
-		}
     </style>
-	<script src= "//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   </head>
-  <body>
-	<div class= "header">
-		<h1>ALEKSANDR ANOHIN</h1>
-		<h3 class= "label">PROGRAMMER</h3>
-		<div class= "contact-header">
-				Riga, Latvia, LV<br>
-				Imanta
-			</div>
-		<div id= "contact">
-			<br>
-			<div class= "contact-header">
-				EMAIL <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "mailto:a06kin@gmail.com" target= "_blank">a06kin@gmail.com</a> <span class= "responsive-show"><br><br></span>
-			</div>
-			<div class= "contact-header">
-				PHONE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span>(+371) 26119258 <span class= "responsive-show"><br><br></span>
-			</div>
-			<div class= "contact-header">
-				WEBSITE <span class= "responsive-hidden">&bull;</span> <span class= "responsive-show"><br></span><a href= "http:&#x2F;&#x2F;www.aan.lv" target= "_blank">http:&#x2F;&#x2F;www.aan.lv</a> <span class= "responsive-show"><br><br></span>
-			</div>
-		</div>
-		<br>
-		<div id= "profiles">
-			<div class= "contact-header">PROFILES</div><br>
-			<p class= "profile"><a href= "https:&#x2F;&#x2F;github.com&#x2F;a06kin" target= "_blank" class= "profile">github</a></p>
-			<p class= "profile"><a href= "https:&#x2F;&#x2F;keybase.io&#x2F;aaa" target= "_blank" class= "profile">keybase</a></p>
-		</div>		
-	</div>
-	<div class= "main">
-		<div id= "work">
-			<h2><i class= "fa fa-suitcase left"></i> WORK EXPERIENCE</h2>
-				<div class= "job">
-					<h3>Programmer, Apply</h3>
-					<h4>September 2014 - Present</h4>
-					<p>&#39;Apply&#39; strives to be on the leading edge of this technological development by bringing the best and most innovative solutions to our customers. Whether it is a small website or intelligent technology solution, &#39;Apply&#39; will give their best performance from beginning to end. &#39;Apply&#39; believes that Artificial Intelligence is becoming the way of the future and we will be a big part of it.</p>
-				</div>
-				<div class= "job">
-					<h3>Teacher, Progmeistars</h3>
-					<h4>September 2011 - Present</h4>
-					<p>Computer courses, programming courses. Teach children programming on Pascal, C&#x2F;Unix, Java</p>
-				</div>
-				<div class= "job">
-					<h3>System administrator, Progmeistars</h3>
-					<h4>January 2011 - Present</h4>
-					<p>Computer courses, programming courses.</p>
-				</div>
-				<div class= "job">
-					<h3>Programmer, Autentica</h3>
-					<h4>June 2014 - September 2014</h4>
-					<p></p>
-				</div>
-				<div class= "job">
-					<h3>Programmer, SpecialSolutions</h3>
-					<h4>January 2012 - June 2014</h4>
-					<p>Special Solutions is a stable service provider in the market of Latvia which is oriented mainly to the large enterprises and the state institutions of Latvia. We offer to our clients a full range of IT services beginning from an elaboration of a conception down to implementation and maintenance of the information systems.</p>
-				</div>
-		</div>
-		<div id= "skills">
-			<h2><i class= "fa fa-tasks left"></i> SKILLS</h2>
-				<h3 class= "skills">Programming</h3>
-				<span class= "keywords">Java</span>
-				<span class= "keywords">C&#x2F;C++</span>
-				<span class= "keywords">Javascript</span>
-				<span class= "keywords">CSS</span>
-				<span class= "keywords">HTML</span>
-				<span class= "keywords">Pascal</span>
-				<span class= "keywords">Delphi</span>
-				<h3 class= "skills">OS</h3>
-				<span class= "keywords">Windows</span>
-				<span class= "keywords">Linux</span>
-				<span class= "keywords">Unix</span>
-				<h3 class= "skills">Continuous (.*)</h3>
-				<span class= "keywords">Jenkins - integration</span>
-				<span class= "keywords">SonarQube - inspection of code quality</span>
-				<span class= "keywords">Upsource - discuss and review code</span>
-		</div><br>
-		<div id= "education">
-			<h2><i class= "fa fa-graduation-cap left"></i> EDUCATION</h2>
-				<h3>Bachelor (unfinished), Business Psychology - RISEBA</h3>
-				<h4>September 2013 - September 2014</h4>
-				<h3>Bachelor (unfinished), Information Technology - University of Latvia</h3>
-				<h4>September 2010 - September 2013</h4>
-				<h3>Courses, Language - Goethe institut</h3>
-				<h4>September 2007 - April 2009</h4>
-				<h4>COURSES</h4>
-				<ul>
-					<li>Deutsch - Basic</li>
-				</ul>
-				<h3>Courses, Language - University of Latvia</h3>
-				<h4>September 2007 - June 2008</h4>
-				<h4>COURSES</h4>
-				<ul>
-					<li>English - Basic</li>
-				</ul>
-				<h3>Courses, Information Technology - Progmeistars</h3>
-				<h4>September 2005 - June 2010</h4>
-				<h4>COURSES</h4>
-				<ul>
-					<li>MS Logo - Basic</li>
-					<li>Pascal - Basic</li>
-					<li>OOP - Basic</li>
-					<li>Java - Basic</li>
-					<li>C&#x2F;Unix - Basic</li>
-					<li>C++ - Basic</li>
-					<li>C#&#x2F;DirectX - Basic</li>
-					<li>System administration - Basic</li>
-					<li>Python - Basic</li>
-				</ul>
-				<h3>School, other - Optional School for Gifted Children</h3>
-				<h4>September 2000 - August 2008</h4>
-		</div>
-		<div id= "interests">
-			<h2><i class= "fa fa-star left"></i> INTERESTS</h2>
-				<h3 class= "skills">Programming</h3>
-				<span class= "keywords">Dart</span>
-				<span class= "keywords">NodeJS</span>
-				<span class= "keywords">OpenCV</span>
-				<span class= "keywords">AngularJS</span>
-				<span class= "keywords">NoSQL</span>
-				<span class= "keywords"></span>
-				<h3 class= "skills">Hardware</h3>
-				<span class= "keywords">RPI</span>
-				<span class= "keywords">LEAP</span>
-		</div>
-		<div id= "languages">
-			<h2><i class= "fa fa-language left"></i> LANGUAGES</h2>
-				<h3>Russian</h3>
-				<h4>Fluency: Native speaker</h4>
-				<h3>English</h3>
-				<h4>Fluency: Limited Working Proficiency</h4>
-				<h3>Latvian</h3>
-				<h4>Fluency: Limited Working Proficiency</h4>
-				<h3>German</h3>
-				<h4>Fluency: Elementary Proficiency</h4>
-		</div>
 
-	</div>
+  <body>
+    <script>
+      window.onload = function () {
+        $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+        $( ".js-tooltip" ).tooltip();
+      }
+    </script>
+    <div class="container-fluid">
+      <div class="row main clearfix">
+        <section class="col-md-3 card-wrapper affix">
+          <div class="card profile-card">
+              <div class="profile-pic">
+                <img class="media-object img-circle center-block"  data-src="holder.js/64x64"
+                  alt="64x64" src="http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png" style="width: 100px; height: 100px;">
+              </div>
+              <h3 class="text-center text-bolder"> Aleksandr Anohin</h3>
+              <h5 class="text-muted text-center">Software developer</h5>
+              <hr>
+
+              <div class="contact-details clearfix">
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-location-arrow"></i>
+                    </span>
+
+                      <span class="info">
+                        Riga, Latvia,
+                        LV
+                      </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-phone"></i>
+                    </span>
+
+                    <span class="info">
+                      (+371) 26119258
+                    </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon">
+                      <i class="fa fa-lg fa-envelope"></i>
+                    </span>
+
+                    <span class="info">
+                      a06kin@gmail.com
+                    </span>
+                  </div>
+
+                  <div class="detail">
+                    <span class="icon" title="Languages I speak">
+                      <i class="fa fa-lg fa-language"></i>
+                    </span>
+
+                    <span class="info">
+                      Russian, English, Latvian, German
+                    </span>
+                  </div>
+              </div>
+
+              <hr>
+
+              <div class="social-links text-center">
+                  <a class="fa fa-github fa-2x social-link link-github"
+                       href="http://www.github.com/a06kin" target="_blank"></a>
+                  <a class="fa fa-rss fa-2x social-link link-blog"
+                       href="http://www.aan.lv" target="_blank"></a>
+              </div>
+          </div>
+        </section>
+
+        <section class="col-md-9 card-wrapper pull-right">
+          <div class="card background-card">
+            <h4 class="text-uppercase text-bolder">Background</h4>
+            <hr>
+
+            <div class="background-details">
+              <div class="detail">
+                <div class="icon">
+                  <i class="fa fa-lg fa-user"></i>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    About
+                  </h4>
+
+                  <div class="content">
+                    My name is Aleksandr Anohin, and I live in Riga, Latvia. I was born in 1991. I started coding in 2005 on courses &#x27;Progmeistars&#x27;. Began with languages such as MS Logo and Free Pascal. Once learned the OOP and Delphi. Next couple of years I raise my programming skills and learn new languages, while not focused on Java. Now I engage in the study of programming in depth. For example algorithms, optimization methods, different programming approaches. 
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail">
+                <div class="icon">
+                  <i class="fa fa-lg fa-building"></i>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Work Experience
+                  </h4>
+
+                  <ul class="list-unstyled">
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p><strong>Software developer</strong>,&nbsp;Apply</p>
+                          <p>&#x27;Apply&#x27; strives to be on the leading edge of this technological development by bringing the best and most innovative solutions to our customers. Whether it is a small website or intelligent technology solution, &#x27;Apply&#x27; will give their best performance from beginning to end. &#x27;Apply&#x27; believes that Artificial Intelligence is becoming the way of the future and we will be a big part of it.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center">
+                          <p>
+                            <strong>Joined:</strong>&nbsp;
+                            Sep, 2014
+                          </p>
+                          <p>
+                              <span class="label label-success">
+                                Currently Working
+                              </span>
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o icon-left"></i>
+                            2 months
+                          </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p><strong>Teacher</strong>,&nbsp;Progmeistars</p>
+                          <p>Computer courses, programming courses. Teach children programming on Pascal, C/Unix, Java</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center">
+                          <p>
+                            <strong>Joined:</strong>&nbsp;
+                            Aug, 2011
+                          </p>
+                          <p>
+                              <span class="label label-success">
+                                Currently Working
+                              </span>
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o icon-left"></i>
+                            3 years 2 months
+                          </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p><strong>System administrator</strong>,&nbsp;Progmeistars</p>
+                          <p>Computer courses, programming courses.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center">
+                          <p>
+                            <strong>Joined:</strong>&nbsp;
+                            Dec, 2010
+                          </p>
+                          <p>
+                              <span class="label label-success">
+                                Currently Working
+                              </span>
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o icon-left"></i>
+                            3 years 10 months
+                          </p>
+                        </div>
+                      </li>
+                      <li class="card card-nested clearfix">
+                        <div class="content has-sidebar">
+                          <p><strong>Software developer</strong>,&nbsp;SpecialSolutions (Autentica since 2014-06-03)</p>
+                          <p>Special Solutions is a stable service provider in the market of Latvia which is oriented mainly to the large enterprises and the state institutions of Latvia. We offer to our clients a full range of IT services beginning from an elaboration of a conception down to implementation and maintenance of the information systems.</p>
+                        </div>
+
+                        <div class="sidebar text-muted text-center">
+                          <p>
+                            <strong>Joined:</strong>&nbsp;
+                            Dec, 2011
+                          </p>
+                          <p>
+                              <strong>Left:</strong>&nbsp;
+                              Sep, 2014
+                          </p>
+                          <p>
+                            <i class="fa fa-clock-o icon-left"></i>
+                            2 years 8 months
+                          </p>
+                        </div>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="detail">
+                <div class="icon">
+                  <i class="fa fa-lg fa-code"></i>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Skills
+                  </h4>
+
+                  <div class="content">
+                    <ul class="list-unstyled">
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                              <div class="skill-progress master">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Java</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">JavaSE{7,8}</span>
+                                <span class="label label-keyword">Spring</span>
+                                <span class="label label-keyword">Servlets</span>
+                                <span class="label label-keyword">Hibernate</span>
+                                <span class="label label-keyword">Maven</span>
+                                <span class="label label-keyword">Ant</span>
+                                <span class="label label-keyword">JRebel</span>
+                                <span class="label label-keyword">JUnit</span>
+                                <span class="label label-keyword">Jetty</span>
+                                <span class="label label-keyword">VisualVM</span>
+                                <span class="label label-keyword">Jackson</span>
+                                <span class="label label-keyword">JSF</span>
+                                <span class="label label-keyword">Grails</span>
+                                <span class="label label-keyword">JDeveloper</span>
+                                <span class="label label-keyword">Swing</span>
+                                <span class="label label-keyword">GWT</span>
+                                <span class="label label-keyword">Android</span>
+                                <span class="label label-keyword">JDBC</span>
+                                <span class="label label-keyword">Joda-Time</span>
+                                <span class="label label-keyword">vert.x</span>
+                                <span class="label label-keyword">RESTX</span>
+                                <span class="label label-keyword">libgdx</span>
+                                <span class="label label-keyword">Log4j</span>
+                                <span class="label label-keyword">JasperReports</span>
+                                <span class="label label-keyword">Jersey</span>
+                                <span class="label label-keyword">Tomcat</span>
+                                <span class="label label-keyword">WildFly</span>
+                                <span class="label label-keyword">Thymeleaf</span>
+                                <span class="label label-keyword">Mockito</span>
+                                <span class="label label-keyword">Selenium</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                              <div class="skill-progress master">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Other</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Git</span>
+                                <span class="label label-keyword">SVN</span>
+                                <span class="label label-keyword">REST</span>
+                                <span class="label label-keyword">Mustache</span>
+                                <span class="label label-keyword">RegExp</span>
+                                <span class="label label-keyword">Shell</span>
+                                <span class="label label-keyword">Eeoman</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Master" data-placement="left">
+                              <div class="skill-progress master">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Tools</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Jenkins</span>
+                                <span class="label label-keyword">SonarQube</span>
+                                <span class="label label-keyword">Upsource</span>
+                                <span class="label label-keyword">SublimeText</span>
+                                <span class="label label-keyword">Intellij IDEA</span>
+                                <span class="label label-keyword">LightTable</span>
+                                <span class="label label-keyword">JIRA</span>
+                                <span class="label label-keyword">GitHub</span>
+                                <span class="label label-keyword">BitBucket</span>
+                                <span class="label label-keyword">Trello</span>
+                                <span class="label label-keyword">Asana</span>
+                                <span class="label label-keyword">Dashing</span>
+                                <span class="label label-keyword">Loggly</span>
+                                <span class="label label-keyword">Newrelic</span>
+                                <span class="label label-keyword">OpenShift</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>C/C++</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">OpenCV</span>
+                                <span class="label label-keyword">Qt</span>
+                                <span class="label label-keyword">FFmpeg</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Javascript</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">AngularJS</span>
+                                <span class="label label-keyword">Node.js</span>
+                                <span class="label label-keyword">jQuery</span>
+                                <span class="label label-keyword">jQuery UI</span>
+                                <span class="label label-keyword">D3.js</span>
+                                <span class="label label-keyword">Processing.js</span>
+                                <span class="label label-keyword">Backbone.js</span>
+                                <span class="label label-keyword">Socket.IO</span>
+                                <span class="label label-keyword">Underscore.js</span>
+                                <span class="label label-keyword">Velocity.js</span>
+                                <span class="label label-keyword">Bower</span>
+                                <span class="label label-keyword">phantomjs</span>
+                                <span class="label label-keyword">casperjs</span>
+                                <span class="label label-keyword">mustache.js</span>
+                                <span class="label label-keyword">Moment.js</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>HTML/CSS</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Foundation</span>
+                                <span class="label label-keyword">Twitter Bootstrap</span>
+                                <span class="label label-keyword">Less Framework</span>
+                                <span class="label label-keyword">Skeleton</span>
+                                <span class="label label-keyword">Pure</span>
+                                <span class="label label-keyword">LESS</span>
+                                <span class="label label-keyword">SASS</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>DB</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Mongo</span>
+                                <span class="label label-keyword">SQLite</span>
+                                <span class="label label-keyword">PL/SQL</span>
+                                <span class="label label-keyword">Oracle Database</span>
+                                <span class="label label-keyword">PostgreSQL</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Intermediate" data-placement="left">
+                              <div class="skill-progress intermediate">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>OS</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Windows</span>
+                                <span class="label label-keyword">Linux</span>
+                                <span class="label label-keyword">Unix</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="card card-nested card-skills">
+                            <div class="skill-level js-tooltip" title="Beginner" data-placement="left">
+                              <div class="skill-progress beginner">
+                              </div>
+                            </div>
+                          <div class="skill-info">
+                            <strong>Programming language</strong>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Ruby/RoR</span>
+                                <span class="label label-keyword">PHP</span>
+                                <span class="label label-keyword">Objective-C</span>
+                                <span class="label label-keyword">Pascal</span>
+                                <span class="label label-keyword">Delphi</span>
+                                <span class="label label-keyword">Dart</span>
+                                <span class="label label-keyword">R</span>
+                                <span class="label label-keyword">Scala</span>
+                                <span class="label label-keyword">Clojure</span>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="detail">
+                <div class="icon">
+                  <i class="fa fa-lg fa-mortar-board"></i>
+                </div>
+                <div class="info">
+                  <h4 class="title text-uppercase">
+                    Education
+                  </h4>
+
+                  <div class="content">
+                    <ul class="list-unstyled">
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Business Psychology, Bachelor (unfinished)</strong>,&nbsp;
+                              RISEBA
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2013
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Aug, 2014
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Information Technology, Bachelor (unfinished)</strong>,&nbsp;
+                              University of Latvia
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2010
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Aug, 2013
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Language, Courses</strong>,&nbsp;
+                              Goethe institut
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Deutsch - Basic</span>
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2007
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Apr, 2009
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Language, Courses</strong>,&nbsp;
+                              University of Latvia
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                                <span class="label label-keyword">English - Basic</span>
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2007
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Jun, 2008
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Information Technology, Courses</strong>,&nbsp;
+                              Progmeistars
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                                <span class="label label-keyword">MS Logo - Basic</span>
+                                <span class="label label-keyword">Pascal - Basic</span>
+                                <span class="label label-keyword">OOP - Basic</span>
+                                <span class="label label-keyword">Java - Basic</span>
+                                <span class="label label-keyword">C/Unix - Basic</span>
+                                <span class="label label-keyword">C++ - Basic</span>
+                                <span class="label label-keyword">C#/DirectX - Basic</span>
+                                <span class="label label-keyword">System administration - Basic</span>
+                                <span class="label label-keyword">Python - Basic</span>
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2005
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Jun, 2010
+                            </p>
+                          </div>
+                        </li>
+                        <li class="card card-nested">
+                          <div class="content has-sidebar">
+                            <p>
+                              <strong>Other, School</strong>,&nbsp;
+                              Optional School for Gifted Children
+                            </p>
+                            <i></i>
+                            <div class="space-top labels">
+                            </div>
+                          </div>
+                          <div class="sidebar text-muted text-center">
+                            <p>
+                              <strong>Started:</strong>&nbsp;
+                              Aug, 2000
+                            </p>
+                            <p>
+                                <strong>Completion:</strong>&nbsp;
+                                Aug, 2008
+                            </p>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+                <div class="detail">
+                  <div class="icon">
+                    <i class="fa fa-lg fa-heart"></i>
+                  </div>
+                  <div class="info">
+                    <h4 class="title text-uppercase">
+                      Interests
+                    </h4>
+
+                    <div class="content">
+                      <ul class="list-unstyled">
+                          <li class="card card-nested">
+                            <p>
+                              <strong>Dance</strong>
+                            </p>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Salsa</span>
+                                <span class="label label-keyword">ChaCha</span>
+                                <span class="label label-keyword">Bachata</span>
+                                <span class="label label-keyword">Kizomba</span>
+                                <span class="label label-keyword">Tango</span>
+                            </div>
+                          </li>
+                          <li class="card card-nested">
+                            <p>
+                              <strong>Sport</strong>
+                            </p>
+
+                            <div class="space-top labels">
+                                <span class="label label-keyword">Football</span>
+                                <span class="label label-keyword">Volleyball</span>
+                                <span class="label label-keyword">Table tennis</span>
+                                <span class="label label-keyword">Cue sports</span>
+                                <span class="label label-keyword">Roller skates</span>
+                            </div>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <link href='//fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
   </body>
 </html>

@@ -33,11 +33,27 @@
     ]
   },
   "work": [
+   {
+	      "company": "CTE",
+	      "position": "Software developer",
+	      "website": "http://www.ctemedia.lv/",
+	      "startDate": "2015-05-07",
+	      "summary": ""
+	    },
+	  {
+	      "company": "Qube",
+	      "position": "Software developer",
+	      "website": "http://www.qube.lv/",
+	      "startDate": "2015-03-04",
+	      "endDate": "2015-05-04",
+	      "summary": "SIA Tarento Latvia (former SIA Qube) is a Latvian IT company specializing in development and management of IT applications and IS/IT consultancy services. Main areas of expertise for SIA Tarento Latvia are application development (Java, .NET, etc.), integration with ready-made business platforms (e.g., WebSphere, webMethods, etc.) and CRM (Siebel implementation and maintenance)."
+	    },
       {
       "company": "Apply",
       "position": "Software developer",
       "website": "http://www.applyit.lv/",
       "startDate": "2014-09-12",
+      "endDate": "2014-12-12",
       "summary": "'Apply' strives to be on the leading edge of this technological development by bringing the best and most innovative solutions to our customers. Whether it is a small website or intelligent technology solution, 'Apply' will give their best performance from beginning to end. 'Apply' believes that Artificial Intelligence is becoming the way of the future and we will be a big part of it."
     },
     {
@@ -57,7 +73,7 @@
     {
       "company": "SpecialSolutions (Autentica since 2014-06-03)",
       "position": "Software developer",
-      "website": "http://www.specialsolutions.lv/",
+      "website": "http://www.autentica.lv/en/",
       "startDate": "2012-01-01",
       "endDate": "2014-09-12",
       "summary": "Special Solutions is a stable service provider in the market of Latvia which is oriented mainly to the large enterprises and the state institutions of Latvia. We offer to our clients a full range of IT services beginning from an elaboration of a conception down to implementation and maintenance of the information systems."
@@ -73,7 +89,7 @@
     },
     {
       "institution": "University of Latvia",
-      "area": "Information Technology",
+      "area": "Computer Science",
       "studyType": "Bachelor (unfinished)",
       "startDate": "2010-09-01",
       "endDate": "2013-09-01"
@@ -100,7 +116,7 @@
     },
     {
       "institution": "Progmeistars",
-      "area": "Information Technology",
+      "area": "Computer Science",
       "studyType": "Courses",
       "startDate": "2005-09-01",
       "endDate": "2010-06-30",

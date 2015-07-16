@@ -6,7 +6,7 @@ Let me introduce myself
 
 I am Alexander Anohin Software Developer by profession, currently staying at Riga (Latvia) with my parents. 
 
-I am born in Riga and have completed Progmeistars courses. Progmeistars - Computer Science. I learned there most of what I know now about Computer Science. They include a lot of things. From programming and algorithms and ending with system administration. I get basic knowledge in many languages.
+First about my education background. I have completed Progmeistars courses. Progmeistars - Computer Science. I learned there most of what I know now about Computer Science. They include a lot of things. From programming and algorithms and ending with system administration. I get basic knowledge in many languages.
  After that i have spent 3 years in Latvia University at Computer Science faculty. But it is not finished it and went to work. In parallel i spend 1 year in RISEBA at Business Psychology faculty.
 
 About my studies it all. But of course I try to constantly improve itself. Read a lot of books and listen to different courses.

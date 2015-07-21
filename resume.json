@@ -80,6 +80,13 @@
     }
   ],
   "education": [
+  	{
+      "institution": "ARPANET",
+      "area": "Googling Stackoverflow",
+      "studyType": "Honorary doctorate",
+      "startDate": "1991-10-18",
+      "endDate": "2038-01-19"
+    },
     {
       "institution": "RISEBA",
       "area": "Business Psychology",
@@ -142,6 +149,14 @@
     }
   ],
   "skills": [
+  	{
+      "name": "Googling Stackoverflow",
+      "level": "Master",
+      "keywords": [
+        "Google",
+        "Stackoverflow"
+      ]
+    },
     {
       "name": "Java",
       "level": "Master",

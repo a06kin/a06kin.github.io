@@ -1,1428 +1,1057 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aleksandr Anohin</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <!-- link rel="shortcut icon" href="favicon.ico" / -->
-    <style>
-      .relative {
-  position: relative;
-}
-.clear-margin {
-  margin: 0;
-}
-.space-top {
-  margin-top: 10px;
-}
-.space-right {
-  margin-right: 10px;
-}
-.icon-left {
-  margin-right: 5px;
-}
-.icon-right {
-  margin-left: 5px;
-}
-.labels {
-  word-spacing: 5px;
-  line-height: 2;
-}
-.label-keyword {
-  display: inline-block;
-  background: #7eb0db;
-  color: white;
-  font-size: 0.9em;
-  padding: 5px;
-  border: 1px solid #357ebd;
-}
-.link-disguise {
-  color: inherit;
-}
-.link-disguise:hover {
-  color: inherit;
-}
-.clear-margin {
-  margin: 0;
-}
-@media (max-width: 992px) {
-  .clear-margin-sm {
-    margin-bottom: 0;
-  }
-}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Aleksandr Anohin</title>
+
+  <link href="https://jsonresume.org/favicon.png" rel="shortcut icon">
+  <script src="https://use.fontawesome.com/ac952219e9.js"></script>
+
+  <style>/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+@import url("https://fonts.googleapis.com/css?family=Asap:400,400italic,700,700italic");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700,700italic");
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
 body {
-  font-family: 'Lato';
-  background: #f0f0f0;
-  color: #333333;
-}
-.main {
-  padding: 5px;
-}
-.card {
-  background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  min-height: 300px;
-  padding: 10px;
-}
-.card-nested {
-  min-height: 0;
-  margin-bottom: 10px;
-  border-width: 1px 0 0 0;
-}
-.card-nested:before,
-.card-nested:after {
-  content: " ";
-  display: table;
-}
-.card-nested:after {
-  clear: both;
-}
-@media (max-width: 480px) {
-  .card-nested {
-    padding: 5px 0;
-  }
-}
-.background-card {
-  padding: 10px 20px;
-}
-.card-wrapper {
-  padding: 5px;
-}
-@media (max-width: 992px) {
-  .card-wrapper {
-    float: none !important;
-  }
-}
-.text-bolder {
-  font-weight: bold;
-}
-.background-details .detail {
-  display: table;
-  padding: 10px 0;
-}
-.background-details .detail .icon {
-  min-width: 45px;
-  max-width: 45px;
-  text-align: center;
-}
-.background-details .detail .info {
-  width: 100%;
-}
-.background-details .detail .title,
-.background-details .detail .icon {
-  color: #707070;
-}
-.background-details .detail .mobile-title {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
   display: none;
-}
-@media (max-width: 480px) {
-  .background-details .detail .mobile-title {
-    display: inline-block;
-    margin-left: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    vertical-align: middle;
-  }
-}
-.background-details .detail .icon,
-.background-details .detail .info {
-  display: table-cell;
-  padding: 0 10px;
-}
-@media (max-width: 480px) {
-  .background-details .detail {
-    display: block;
-  }
-  .background-details .detail .icon {
-    max-width: inherit;
-    min-width: inherit;
-    text-align: left;
-  }
-  .background-details .detail .icon,
-  .background-details .detail .info {
-    display: block;
-    padding: 10px 0;
-  }
-  .background-details .detail .title {
-    display: none;
-  }
-}
-.info .content.has-sidebar {
-  width: 80%;
-  box-sizing: border-box;
-  float: left;
-  padding: 0 10px;
-  border-right: 1px solid #cdcdcd;
-}
-@media (max-width: 992px) {
-  .info .content.has-sidebar {
-    width: 100%;
-    border-right: 0;
-  }
-}
-@media (max-width: 480px) {
-  .info .content.has-sidebar {
-    padding: 0 2px;
-  }
-}
-.info .sidebar {
-  margin-left: 80%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-@media (max-width: 480px) {
-  ul {
-    padding-left: 25px;
-  }
-}
-.current-event {
-  font-size: 8px;
-  color: #5ACE24;
-  position: absolute;
-  right: 100%;
-  top: 4px;
-  left: -10px;
-}
-/*
-    Credits: http://codyhouse.co/demo/smart-fixed-navigation/index.html
-*/
-.floating-nav-trigger {
-  width: 50px;
-  height: 50px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  -webkit-transition: background-color 0.5s ease;
-  -o-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-  display: block;
-  border-radius: 50%;
-  text-align: center;
-  padding-top: 10px;
-  background-color: white;
-  font-size: 1.5em;
-  color: #357ebd;
-  z-index: 100;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
-.floating-nav-trigger .close-icon {
-  display: none;
-}
-.floating-nav-trigger:hover {
-  color: #1f496e;
-  background-color: #e6e6e6;
-  text-decoration: none;
-}
-.floating-nav-trigger.is-open {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.floating-nav-trigger.is-open .close-icon {
-  display: inherit;
-}
-.floating-nav-trigger.is-open .fa-bars {
-  display: none;
-}
-.floating-nav-trigger.is-open:hover {
-  background-color: white;
-}
-.floating-nav {
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transition: transform 0.3s, visibility 0s 0.3s;
-  -o-transition: transform 0.3s, visibility 0s 0.3s;
-  transition: transform 0.3s, visibility 0s 0.3s;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  position: fixed;
-  z-index: 50;
-  right: 10px;
-  bottom: 10px;
-  background-color: white;
-  width: 90%;
-  max-width: 400px;
-  visibility: hidden;
-  overflow: hidden;
-}
-.floating-nav ul {
-  font-size: 1.2em;
-  margin: 0;
-}
-.floating-nav ul li {
-  border-bottom: 1px solid #eff2f6;
-}
-.floating-nav ul li a {
-  padding: 20px;
-  text-decoration: none;
-  color: #357ebd;
-  display: block;
-}
-.floating-nav ul li a:hover {
-  color: #1f496e;
-}
-.floating-nav ul li i.fa {
-  margin-right: 10px;
-}
-.floating-nav ul li:last-child {
-  border-bottom: 0;
-}
-.floating-nav.is-visible {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: transform 0.3s, visibility 0s 0s;
-  -o-transition: transform 0.3s, visibility 0s 0s;
-  transition: transform 0.3s, visibility 0s 0s;
-  visibility: visible;
-}
-@media (max-width: 992px) {
-  .profile-card-wrapper {
-    position: relative;
-  }
-}
-.profile-pic {
-  padding: 20px 0;
-}
-@media (max-width: 992px) {
-  .profile-pic {
-    padding: 10px 0;
-  }
-}
-.profile-pic img {
-  width: 100px;
-  height: 100px;
-}
-@media (max-width: 992px) {
-  .name {
-    margin-top: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .contact-details {
-    text-align: center;
-  }
-}
-.contact-details .detail {
-  display: table;
-  padding: 10px 0;
-}
-.contact-details .detail .icon {
-  padding: 0 10px;
-  color: #707070;
-}
-@media (max-width: 992px) {
-  .contact-details .detail .icon {
-    padding: 0 5px 0 0;
-  }
-}
-.contact-details .detail .info {
-  font-size: 0.8em;
-}
-.contact-details .detail .icon,
-.contact-details .detail .info {
-  display: table-cell;
-  vertical-align: middle;
-}
-@media (max-width: 768px) {
-  .contact-details .detail {
-    position: relative;
-    float: left;
-    width: 100%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media (max-width: 992px) {
-  .contact-details .detail {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 10px;
-  }
-  .contact-details .detail .icon,
-  .contact-details .detail .info {
-    display: inline-block;
-  }
-}
-@media (max-width: 992px) and (min-width: 768px) {
-  .contact-details .detail {
-    float: left;
-    width: 25%;
-  }
-}
-.social-links {
-  line-height: 2.5;
-}
-.social-link {
-  margin-left: 5px;
-  min-width: 35px;
-  display: inline-block;
-}
-.social-link:first-child {
-  margin-left: 0;
-}
-.social-link:hover {
-  text-decoration: none;
-}
-.link-github {
-  color: #454545;
-}
-.link-github:hover,
-.link-github:focus {
-  text-decoration: none;
-  color: #2b2b2b;
-}
-.link-twitter {
-  color: #33ccff;
-}
-.link-twitter:hover,
-.link-twitter:focus {
-  text-decoration: none;
-  color: #00bfff;
-}
-.link-blog {
-  color: #f36f24;
-}
-.link-blog:hover,
-.link-blog:focus {
-  text-decoration: none;
-  color: #d8560c;
-}
-.link-linkedin {
-  color: #007bb6;
-}
-.link-linkedin:hover,
-.link-linkedin:focus {
-  text-decoration: none;
-  color: #005983;
-}
-.link-skype {
-  color: #12a5f4;
-}
-.link-skype:hover,
-.link-skype:focus {
-  text-decoration: none;
-  color: #0986ca;
-}
-.link-instagram {
-  color: #3f729b;
-}
-.link-instagram:hover,
-.link-instagram:focus {
-  text-decoration: none;
-  color: #305777;
-}
-.link-stackoverflow {
-  color: #8e8e92;
-}
-.link-stackoverflow:hover,
-.link-stackoverflow:focus {
-  text-decoration: none;
-  color: #747479;
-}
-.link-stackexchange {
-  color: #62b0df;
-}
-.link-stackexchange:hover,
-.link-stackexchange:focus {
-  text-decoration: none;
-  color: #389bd6;
-}
-.link-lastfm {
-  color: #d12127;
-}
-.link-lastfm:hover,
-.link-lastfm:focus {
-  text-decoration: none;
-  color: #a51a1f;
-}
-.link-soundcloud {
-  color: #e8822d;
-}
-.link-soundcloud:hover,
-.link-soundcloud:focus {
-  text-decoration: none;
-  color: #cc6916;
-}
-.link-googleplus {
-  color: #dd4b39;
-}
-.link-googleplus:hover,
-.link-googleplus:focus {
-  text-decoration: none;
-  color: #c23321;
-}
-.link-youtube {
-  color: #dd4b39;
-}
-.link-youtube:hover,
-.link-youtube:focus {
-  text-decoration: none;
-  color: #c23321;
-}
-.link-pinterest {
-  color: #bd091f;
-}
-.link-pinterest:hover,
-.link-pinterest:focus {
-  text-decoration: none;
-  color: #8c0717;
-}
-.link-gratipay {
-  color: #663300;
-}
-.link-gratipay:hover,
-.link-gratipay:focus {
-  text-decoration: none;
-  color: #331a00;
-}
-.link-vimeo {
-  color: #17b3e8;
-}
-.link-vimeo:hover,
-.link-vimeo:focus {
-  text-decoration: none;
-  color: #128fba;
-}
-.link-behance {
-  color: #2c98cf;
-}
-.link-behance:hover,
-.link-behance:focus {
-  text-decoration: none;
-  color: #2379a5;
-}
-.link-codepen {
-  color: #1c1c1c;
-}
-.link-codepen:hover,
-.link-codepen:focus {
-  text-decoration: none;
-  color: #020202;
-}
-.link-foursquare {
-  color: #fa4778;
-}
-.link-foursquare:hover,
-.link-foursquare:focus {
-  text-decoration: none;
-  color: #f91554;
-}
-.link-reddit {
-  color: #545454;
-}
-.link-reddit:hover,
-.link-reddit:focus {
-  text-decoration: none;
-  color: #3b3b3b;
-}
-.link-spotify {
-  color: #acd200;
-}
-.link-spotify:hover,
-.link-spotify:focus {
-  text-decoration: none;
-  color: #829f00;
-}
-.link-tumblr {
-  color: #2d4661;
-}
-.link-tumblr:hover,
-.link-tumblr:focus {
-  text-decoration: none;
-  color: #1d2d3e;
-}
-.link-dribbble {
-  color: #ce366f;
-}
-.link-dribbble:hover,
-.link-dribbble:focus {
-  text-decoration: none;
-  color: #a82959;
-}
-.link-facebook {
-  color: #4b6daa;
-}
-.link-facebook:hover,
-.link-facebook:focus {
-  text-decoration: none;
-  color: #3b5687;
-}
-.link-angellist {
-  color: #000000;
-}
-.link-angellist:hover,
-.link-angellist:focus {
-  text-decoration: none;
-  color: #000000;
-}
-.link-bitbucket {
-  color: #205081;
-}
-.link-bitbucket:hover,
-.link-bitbucket:focus {
-  text-decoration: none;
-  color: #163758;
-}
-.card-skills {
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
   position: relative;
-}
-.skill-level {
-  border-radius: 3px;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 0;
-  width: 10px;
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
-}
-.skill-level .skill-progress {
-  position: absolute;
-  border-radius: 3px;
-  bottom: 0;
-  width: 100%;
-  -webkit-transition: height 1s ease;
-}
-.skill-level .skill-progress.beginner {
-  height: 50%;
-  background: #e74c3c;
-}
-.skill-level .skill-progress.intermediate {
-  height: 70%;
-  background: #f1c40f;
-}
-.skill-level .skill-progress.advanced {
-  height: 80%;
-  background: #428bca;
-}
-.skill-level .skill-progress.master {
-  height: 95%;
-  background: #5cb85c;
-}
-.skill-info {
-  margin-left: 10px;
-}
-@media (max-width: 480px) {
-  .skill-info {
-    margin-left: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .quote {
-    font-size: inherit;
-  }
-}
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+.item h3,
+.item h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-family: "Asap"; }
+  .item h3 .level,
+  .item h4 .level {
+    font-size: .7rem;
+    color: rgba(0, 0, 0, 0.54); }
+
+.item .column,
+.item .columns {
+  margin-bottom: 1rem; }
+
+.item .row {
+  margin-bottom: 1rem; }
+  .item .row.no-padding {
+    margin-bottom: 0; }
+
+main > .row {
+  margin-bottom: 1rem; }
+
+main > .row:last-child {
+  margin-bottom: 0rem; }
+  main > .row:last-child .columns:last-child,
+  main > .row:last-child .column:last-child {
+    margin-bottom: 0; }
+
 @media print {
-  a[href]:after {
-    content: none !important;
-  }
-  .profile-card {
-    text-align: center;
-  }
-  .profile-pic {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .profile-pic img {
-    border-radius: 0;
-  }
-  .name-and-profession {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 15px;
-  }
-  .contact-details .detail {
-    position: relative;
-    float: left;
-    width: 25%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .item .row {
+    margin: 0 0 1rem; } }
+
+html {
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #880E4F;
+  color: #fff; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+body {
+  background-color: #fafafa;
+  background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/school.png");
+  margin: 1rem; }
+
+.content {
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  margin-bottom: 1rem; }
+
+.content:last-child {
+  margin-bottom: 0; }
+
+@media (min-width: 700px) {
+  .content {
+    padding: 4rem; } }
+
+@page {
+  margin: 25mm 25mm 25mm 25mm; }
+
+@media print {
+  body {
+    background-image: none;
     padding: 0;
-  }
-  .floating-nav,
-  .floating-nav-trigger {
-    display: none;
-  }
-  .pagebreak {
-    page-break-before: always;
-  }
-}
+    margin: 0; }
+  .content {
+    border: none;
+    padding: 0  0 2rem;
+    margin: 0; }
+  article {
+    page-break-inside: avoid; } }
 
-    </style>
-  </head>
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; }
 
-  <body itemscope itemtype="http://schema.org/Person">
-    <script>
-      window.onload = function () {
-        var toggleFloatingMenu = function() {
-          $( '.js-floating-nav' ).toggleClass( 'is-visible' );
-          $( '.js-floating-nav-trigger' ).toggleClass( 'is-open' );
-        };
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
 
-        $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
-        $( "[rel=tooltip]" ).tooltip();
-        $( '.js-floating-nav-trigger' ).on( 'click', function(e) {
-          e.preventDefault();
-          toggleFloatingMenu();
-        });
-        $( '.js-floating-nav a' ).on( 'click', toggleFloatingMenu );
-      }
-    </script>
-    <div class="container-fluid">
-      <div class="row main clearfix">
-        <a href="#" class="js-floating-nav-trigger floating-nav-trigger">
-          <i class="fa fa-bars"></i>
-          <span class="close-icon">&times;</span>
-        </a>
-        <nav class="floating-nav js-floating-nav">
-          <ul class="list-unstyled">
-            <li>
-              <a href="#about">
-                <i class="fa fa-user"></i>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#work-experience">
-                <i class="fa fa-building"></i>
-                Work Experience
-              </a>
-            </li>
-            <li>
-              <a href="#skills">
-                <i class="fa fa-code"></i>
-                Skills
-              </a>
-            </li>
-            <li>
-              <a href="#education">
-                <i class="fa fa-mortar-board"></i>
-                Education
-              </a>
-            </li>
+@media print, (min-width: 700px) {
+  .column,
+  .columns {
+    margin-left: 4%;
+    margin-bottom: 0; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+  .one.column,
+  .one.columns {
+    width: 4.66667%; }
+  .two.columns {
+    width: 13.33333%; }
+  .three.columns {
+    width: 22%; }
+  .four.columns {
+    width: 30.66667%; }
+  .five.columns {
+    width: 39.33333%; }
+  .six.columns {
+    width: 48%; }
+  .seven.columns {
+    width: 56.66667%; }
+  .eight.columns {
+    width: 65.33333%; }
+  .nine.columns {
+    width: 74%; }
+  .ten.columns {
+    width: 82.66667%; }
+  .eleven.columns {
+    width: 91.33333%; }
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0; }
+  .one-third.column {
+    width: 30.66667%; }
+  .two-thirds.column {
+    width: 65.33333%; }
+  .one-half.column {
+    width: 48%; }
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 8.66667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 17.33333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 26%; }
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 34.66667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 43.33333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 52%; }
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 60.66667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 69.33333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 78%; }
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 86.66667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 95.33333%; }
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 34.66667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 69.33333%; }
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    margin-left: 52%; } }
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+#cv-image {
+  margin: 0 auto 1rem;
+  max-width: 50%;
+  display: block; }
+
+#area {
+  color: #880E4F;
+  margin: 1rem 0; }
+
+#summary {
+  margin-top: 1rem; }
+
+@media print, (min-width: 700px) {
+  #cv-image {
+    margin: 0;
+    width: 13rem;
+    display: inline-block;
+    float: right; } }
+
+img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 100%; }
+
+#languages p {
+  margin-bottom: 0; }
+
+ul {
+  padding: 0;
+  margin-left: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: outside; }
+  ul li {
+    padding-left: .5rem; }
+
+.unstyled {
+  list-style-type: none;
+  margin: 0; }
+  .unstyled li {
+    padding: 0; }
+
+#skills ul {
+  margin-bottom: 0; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: "Asap", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: .05rem;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left; }
+
+p {
+  margin: 0 0 1rem; }
+
+@media (min-width: 700px) {
+  html {
+    font-size: 18px; } }
+
+.fa {
+  min-width: 1.75rem; }
+
+a {
+  text-decoration: none;
+  color: #880E4F; }
+  a:hover {
+    color: rgba(0, 0, 0, 0.87); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+  font-family: "Noto Serif", Georgia, Times, serif;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #880E4F; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 1rem; }
+
+.impact {
+  font-size: 1.2rem; }
+</style>
+</head>
+
+<body>
+
+  <header class="container content">
+    <div class="row">
+
+      <!-- BASIC INFORMATION -->
+        <div class="twelve columns">
+
+            <img src="http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png?s&#x3D;400" alt="CV image" id="cv-image">
+
+          <h1>Aleksandr Anohin</h1>
+
+            <div class="impact">Software developer</div>
+
+            <div id="area">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>Latvia, LV
+            </div>
+
+          <ul class="unstyled">
               <li>
-                <a href="#interests">
-                  <i class="fa fa-heart"></i>
-                  Interests
-                </a>
+                <strong>
+                  Email
+                </strong> <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="412071772a282f01262c20282d6f222e2c">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+              </li>
+              <li>
+                <strong>
+                  Phone
+                </strong> (+371) 26119258
+              </li>
+              <li>
               </li>
           </ul>
-        </nav>
+        </div>
 
-        <section class="col-md-3 card-wrapper profile-card-wrapper affix">
-          <div class="card profile-card">
-              <span class="profile-pic-container">
-                <div class="profile-pic">
-                  <img class="media-object img-circle center-block"  data-src="holder.js/100x100"
-                    alt="Aleksandr Anohin" src="http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png" itemprop="image">
-                </div>
 
-                <div class="name-and-profession">
-                  <h3 class="text-center text-bolder name" itemprop="name"> Aleksandr Anohin</h3>
-                  <h5 class="text-muted text-center" itemprop="jobTitle">Software developer</h5>
-                </div>
-              </span>
-              <hr>
-
-              <div class="contact-details clearfix">
-
-                  <div class="detail">
-                    <span class="icon">
-                      <i class="fa fa-lg fa-location-arrow"></i>
-                    </span>
-                    <span class="info">
-                      Riga, Latvia, LV
-                    </span>
-                  </div>
-
-                  <div class="detail">
-                    <span class="icon">
-                      <i class="fa fa-lg fa-phone"></i>
-                    </span>
-
-                    <span class="info" itemprop="telephone">
-                      (+371) 26119258
-                    </span>
-                  </div>
-
-                  <div class="detail">
-                    <span class="icon">
-                      <i class="fa fa-lg fa-envelope"></i>
-                    </span>
-
-                    <span class="info">
-                      <a href="/cdn-cgi/l/email-protection#1b7a2b2d7072755b7c767a727735787476" class="link-disguise" itemprop="email"><span class="__cf_email__" data-cfemail="513061673a383f11363c30383d7f323e3c">[email&#160;protected]</span><script cf-hash='f9e31' type="text/javascript">
-/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></a>
-                    </span>
-                  </div>
-
-                  <div class="detail">
-                    <span class="icon">
-                      <i class="fa fa-lg fa-link"></i>
-                    </span>
-
-                    <span class="info">
-                      <a href="http://www.aan.lv" target="_blank">http://www.aan.lv</a>
-                    </span>
-                  </div>
-
-                  <div class="detail">
-                    <span class="icon" title="Languages I speak">
-                      <i class="fa fa-lg fa-language"></i>
-                    </span>
-
-                    <span class="info">
-                      Russian, English, Latvian, German
-                    </span>
-                  </div>
-              </div>
-
-              <hr>
-
-              <div class="social-links text-center">
-                  <a class="fa fa-github fa-2x social-link link-github"
-                       href="//github.com/a06kin" target="_blank"></a>
-              </div>
+          <div class="twelve columns">
+            <ul class="unstyled">
+                <li>
+                  <a href="http://www.aan.lv" target="_blank">
+                    <i class="fa fa-globe" aria-hidden="true"></i>http://www.aan.lv
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/a06kin" target="_blank">
+                    <i class="fa fa-github" aria-hidden="true"></i>@a06kin
+                  </a>
+                </li>
+                <li>
+                  <a href="https://keybase.io/aaa" target="_blank">
+                    <i class="fa fa-check" aria-hidden="true"></i>@aaa
+                  </a>
+                </li>
+            </ul>
           </div>
-        </section>
+      <!-- /BASIC INFOMATION -->
 
-        <section class="col-md-9 card-wrapper pull-right">
-          <div class="card background-card">
-            <h4 class="text-uppercase text-bolder">Background</h4>
-            <hr>
+    </div>
+  </header>
 
-            <div class="background-details">
-              <div class="detail" id="about">
-                <div class="icon">
-                  <i class="fa fa-lg fa-user"></i>
-                  <span class="mobile-title">About</span>
-                </div>
-                <div class="info">
-                  <h4 class="title text-uppercase">
-                    About
-                  </h4>
+  <main class="container content">
 
-                  <div class="content" itemprop="description">
-                    My name is Aleksandr Anohin, and I live in Riga, Latvia. I was born in 1991. I started coding in 2005 on courses &#x27;Progmeistars&#x27;. Began with languages such as MS Logo and Free Pascal. Once learned the OOP and Delphi. Next couple of years I raise my programming skills and learn new languages, while not focused on Java. Now I engage in the study of programming in depth. For example algorithms, optimization methods, different programming approaches. 
-                  </div>
-                </div>
+    <!-- WORK -->
+      <section class="row">
+        <div id="work" class="twelve columns item">
+          <h2>Experience</h2>
+
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.skywindgroup.com/" target="_blank">Skywind group</a>
+                  </h3>
+
+                  <strong>Java developer</strong>
+                  <br>
+
+                Since May 2015
+              </header>
+
+              <div class="eight columns">
+                  <p>Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements;</p>
+
+                  <ul>
+                      <li>Developing new components &amp; functionality to existing systems</li>
+                      <li>Investigate new tools to the team</li>
+                      <li>Developing new functionalities - back-end and front-end</li>
+                      <li>Writing unit (and other) tests</li>
+                  </ul>
               </div>
+            </article>
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.qube.lv/" target="_blank">Tarento Latvia</a>
+                  </h3>
 
-              <div class="detail" id="work-experience">
-                <div class="icon">
-                  <i class="fa fa-lg fa-building"></i>
-                  <span class="mobile-title">Work Experience</span>
-                </div>
-                <div class="info">
-                  <h4 class="title text-uppercase">
-                    Work Experience
-                  </h4>
+                  <strong>Java developer</strong>
+                  <br>
 
-                  <ul class="list-unstyled">
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                              <i class="fa fa-circle current-event"
-                                 rel="tooltip" title="Currently Working" data-placement="left"></i>
-                            <strong>Software developer</strong>,&nbsp;
-                              <a href="http://www.ctemedia.lv/"  target="_blank">CTE</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                May, 2015 -
-                                  Present
-                              </span>
+                Mar. 2015 &ndash; May 2015
+              </header>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  2 months
-                                </span>
-                            </small>
-                          </p>
-                          <p></p>
-                        </div>
-                      </li>
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                            <strong>Software developer</strong>,&nbsp;
-                              <a href="http://www.qube.lv/"  target="_blank">Qube</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                Mar, 2015 -
-                                  May, 2015
-                              </span>
+              <div class="eight columns">
+                  <p>Working in a small team with a clear division of responsibilities. Development of internal system for easy work with clients;</p>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  2 months
-                                </span>
-                            </small>
-                          </p>
-                          <p>SIA Tarento Latvia (former SIA Qube) is a Latvian IT company specializing in development and management of IT applications and IS/IT consultancy services. Main areas of expertise for SIA Tarento Latvia are application development (Java, .NET, etc.), integration with ready-made business platforms (e.g., WebSphere, webMethods, etc.) and CRM (Siebel implementation and maintenance).</p>
-                        </div>
-                      </li>
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                            <strong>Software developer</strong>,&nbsp;
-                              <a href="http://www.applyit.lv/"  target="_blank">Apply</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                Sep, 2014 -
-                                  Dec, 2014
-                              </span>
+              </div>
+            </article>
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.applyit.lv/" target="_blank">Apply IT</a>
+                  </h3>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  3 months
-                                </span>
-                            </small>
-                          </p>
-                          <p>&#x27;Apply&#x27; strives to be on the leading edge of this technological development by bringing the best and most innovative solutions to our customers. Whether it is a small website or intelligent technology solution, &#x27;Apply&#x27; will give their best performance from beginning to end. &#x27;Apply&#x27; believes that Artificial Intelligence is becoming the way of the future and we will be a big part of it.</p>
-                        </div>
-                      </li>
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                              <i class="fa fa-circle current-event"
-                                 rel="tooltip" title="Currently Working" data-placement="left"></i>
-                            <strong>Teacher</strong>,&nbsp;
-                              <a href="http://www.progmeistars.lv"  target="_blank">Progmeistars</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                Sep, 2011 -
-                                  Present
-                              </span>
+                  <strong>Java developer</strong>
+                  <br>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  3 years 10 months
-                                </span>
-                            </small>
-                          </p>
-                          <p>Computer courses, programming courses. Teach children programming on Pascal, C/Unix, Java</p>
-                        </div>
-                      </li>
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                              <i class="fa fa-circle current-event"
-                                 rel="tooltip" title="Currently Working" data-placement="left"></i>
-                            <strong>System administrator</strong>,&nbsp;
-                              <a href="http://www.progmeistars.lv"  target="_blank">Progmeistars</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                Jan, 2011 -
-                                  Present
-                              </span>
+                Sept. 2014 &ndash; Dec. 2014
+              </header>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  4 years 6 months
-                                </span>
-                            </small>
-                          </p>
-                          <p>Computer courses, programming courses.</p>
-                        </div>
-                      </li>
-                      <li class="card card-nested clearfix">
-                        <div class="content">
-                          <p class="clear-margin relative">
-                            <strong>Software developer</strong>,&nbsp;
-                              <a href="http://www.autentica.lv/en/"  target="_blank">SpecialSolutions (Autentica since 2014-06-03)</a>
-                          </p>
-                          <p class="text-muted">
-                            <small>
-                              <span class="space-right">
-                                Jan, 2012 -
-                                  Sep, 2014
-                              </span>
+              <div class="eight columns">
+                  <p>Development the solution to show the possibility of moving inside the store. Adapting an existing site for the big stands with touchscreen;</p>
 
-                                <span>
-                                  <i class="fa fa-clock-o icon-left"></i>
-                                  2 years 8 months
-                                </span>
-                            </small>
-                          </p>
-                          <p>Special Solutions is a stable service provider in the market of Latvia which is oriented mainly to the large enterprises and the state institutions of Latvia. We offer to our clients a full range of IT services beginning from an elaboration of a conception down to implementation and maintenance of the information systems.</p>
-                        </div>
-                      </li>
+              </div>
+            </article>
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.autentica.lv/" target="_blank">Autentica</a>
+                  </h3>
+
+                  <strong>Java developer</strong>
+                  <br>
+
+                Jan. 2012 &ndash; Sept. 2014
+              </header>
+
+              <div class="eight columns">
+                  <p>Development of various systems for users.</p>
+
+                  <ul>
+                      <li>Developing new functionalities - back-end and front-end</li>
+                      <li>Communicating with customer to provide the best product</li>
+                  </ul>
+              </div>
+            </article>
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.progmeistars.lv/" target="_blank">Progmeistars</a>
+                  </h3>
+
+                  <strong>System administrator</strong>
+                  <br>
+
+                Since Jan. 2011
+              </header>
+
+              <div class="eight columns">
+                  <p>Working as technical lead to identify and implement solutions to problems affecting IT services;</p>
+
+                  <ul>
+                      <li>Installation and maintenance of all systems</li>
+                      <li>Building, configuration and troubleshooting server and desktop hardware</li>
+                      <li>Providing consultation and advice on selection IT equipment</li>
+                  </ul>
+              </div>
+            </article>
+            <article class="row">
+              <header class="four columns">
+                  <h3>
+                      <a href="http://www.progmeistars.lv/" target="_blank">Progmeistars</a>
+                  </h3>
+
+                  <strong>Teacher</strong>
+                  <br>
+
+                Since Sept. 2011
+              </header>
+
+              <div class="eight columns">
+                  <p>Working with small groups of children up to 12 people. Teaching the basics of programming. Mainly java &amp; c/unix;</p>
+
+                  <ul>
+                      <li>Work with children of different age groups</li>
+                      <li>Developing training programs</li>
+                  </ul>
+              </div>
+            </article>
+        </div>
+      </section>
+    <!-- /WORK -->
+
+    <!-- EDUCATION -->
+      <section class="row">
+        <div id="education" class="twelve columns item">
+          <h2>Education</h2>
+
+            <article class="row">
+                <header class="twelve columns">
+
+
+                <h3>RISEBA</h3>
+
+                <strong>Business Psychology (incomplete)</strong>
+                <br>
+
+                Bachelor
+                <br>
+
+              Sept. 2013 &ndash; Sept. 2014
+              </header>
+
+            </article>
+            <article class="row">
+                <header class="four columns">
+
+
+                <h3>University of Latvia</h3>
+
+                <strong>Information Technology (incomplete)</strong>
+                <br>
+
+                Bachelor
+                <br>
+
+              Sept. 2010 &ndash; Sept. 2013
+              </header>
+
+                <div class="eight columns">
+                  <ul>
+                      <li>OOP</li>
+                      <li>C/C++</li>
                   </ul>
                 </div>
+            </article>
+            <article class="row">
+                <header class="four columns">
+
+
+                <h3>Progmeistars</h3>
+
+                <strong>Information Technology</strong>
+                <br>
+
+                Courses
+                <br>
+
+              Sept. 2005 &ndash; June 2010
+              </header>
+
+                <div class="eight columns">
+                  <ul>
+                      <li>OOP</li>
+                      <li>Java</li>
+                      <li>C/Unix</li>
+                  </ul>
+                </div>
+            </article>
+            <article class="row">
+                <header class="four columns">
+
+
+                <h3>ARPANET</h3>
+
+                <strong>Googling Stackoverflow</strong>
+                <br>
+
+                Honorary doctorate
+                <br>
+
+              Jan. 1970 &ndash; Jan. 2038
+              </header>
+
+                <div class="eight columns">
+                  <ul>
+                      <li>Google</li>
+                      <li>Stackoverflow</li>
+                  </ul>
+                </div>
+            </article>
+        </div>
+      </section>
+    <!-- /EDUCATION -->
+
+    <!-- SKILLS -->
+      <section class="row">
+        <div id="skills" class="twelve columns item">
+          <h2>Skills</h2>
+
+              <div class="row no-padding">
+
+            <article class="four columns">
+              <h3>
+                Back-end Development
+                  <span class="level">(Advanced)</span>
+              </h3>
+
+                <ul>
+                    <li>Java</li>
+                    <li>Spring</li>
+                    <li>MyBatis</li>
+                    <li>JUnit</li>
+                    <li>PlayFramework</li>
+                </ul>
+            </article>
+
+
+            <article class="four columns">
+              <h3>
+                Front-end Development
+                  <span class="level">(Advanced)</span>
+              </h3>
+
+                <ul>
+                    <li>JavaScript</li>
+                    <li>CoffeScript</li>
+                    <li>Angular 2</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </article>
+
+
+            <article class="four columns">
+              <h3>
+                Dance
+                  <span class="level">(Advanced)</span>
+              </h3>
+
+                <ul>
+                    <li>Salsa</li>
+                    <li>Tango</li>
+                    <li>Bachata</li>
+                    <li>Kizomba</li>
+                    <li>Cha-cha</li>
+                </ul>
+            </article>
+
               </div>
+        </div>
+      </section>
+    <!-- /SKILLS -->
 
-                <div class="detail" id="skills">
-                  <div class="icon">
-                    <i class="fa fa-lg fa-code"></i>
-                    <span class="mobile-title">Skills</span>
-                  </div>
-                  <div class="info">
-                    <h4 class="title text-uppercase">
-                      Skills
-                    </h4>
+    <!-- LANGUAGES -->
+      <section class="row">
+        <div id="languages" class="twelve columns item">
+          <h2>Languages</h2>
 
-                    <div class="content">
-                      <ul class="list-unstyled">
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Master" data-placement="left">
-                                <div class="skill-progress master">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Googling Stackoverflow</strong>
+              <div class="row no-padding">
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Google</span>
-                                  <span class="label label-keyword">Stackoverflow</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Master" data-placement="left">
-                                <div class="skill-progress master">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Java</strong>
+            <article class="four columns">
+              <h3>English</h3>
+              <p></p>
+            </article>
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">JavaSE{7,8}</span>
-                                  <span class="label label-keyword">Spring</span>
-                                  <span class="label label-keyword">Servlets</span>
-                                  <span class="label label-keyword">Hibernate</span>
-                                  <span class="label label-keyword">Maven</span>
-                                  <span class="label label-keyword">Ant</span>
-                                  <span class="label label-keyword">JRebel</span>
-                                  <span class="label label-keyword">JUnit</span>
-                                  <span class="label label-keyword">Jetty</span>
-                                  <span class="label label-keyword">VisualVM</span>
-                                  <span class="label label-keyword">Jackson</span>
-                                  <span class="label label-keyword">JSF</span>
-                                  <span class="label label-keyword">Grails</span>
-                                  <span class="label label-keyword">JDeveloper</span>
-                                  <span class="label label-keyword">Swing</span>
-                                  <span class="label label-keyword">GWT</span>
-                                  <span class="label label-keyword">Android</span>
-                                  <span class="label label-keyword">JDBC</span>
-                                  <span class="label label-keyword">Joda-Time</span>
-                                  <span class="label label-keyword">vert.x</span>
-                                  <span class="label label-keyword">RESTX</span>
-                                  <span class="label label-keyword">libgdx</span>
-                                  <span class="label label-keyword">Log4j</span>
-                                  <span class="label label-keyword">JasperReports</span>
-                                  <span class="label label-keyword">Jersey</span>
-                                  <span class="label label-keyword">Tomcat</span>
-                                  <span class="label label-keyword">WildFly</span>
-                                  <span class="label label-keyword">Thymeleaf</span>
-                                  <span class="label label-keyword">Mockito</span>
-                                  <span class="label label-keyword">Selenium</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Master" data-placement="left">
-                                <div class="skill-progress master">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Other</strong>
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Git</span>
-                                  <span class="label label-keyword">SVN</span>
-                                  <span class="label label-keyword">REST</span>
-                                  <span class="label label-keyword">Mustache</span>
-                                  <span class="label label-keyword">RegExp</span>
-                                  <span class="label label-keyword">Shell</span>
-                                  <span class="label label-keyword">Eeoman</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Master" data-placement="left">
-                                <div class="skill-progress master">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Tools</strong>
+            <article class="four columns">
+              <h3>Latvian</h3>
+              <p></p>
+            </article>
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Jenkins</span>
-                                  <span class="label label-keyword">SonarQube</span>
-                                  <span class="label label-keyword">Upsource</span>
-                                  <span class="label label-keyword">SublimeText</span>
-                                  <span class="label label-keyword">Intellij IDEA</span>
-                                  <span class="label label-keyword">LightTable</span>
-                                  <span class="label label-keyword">JIRA</span>
-                                  <span class="label label-keyword">GitHub</span>
-                                  <span class="label label-keyword">BitBucket</span>
-                                  <span class="label label-keyword">Trello</span>
-                                  <span class="label label-keyword">Asana</span>
-                                  <span class="label label-keyword">Dashing</span>
-                                  <span class="label label-keyword">Loggly</span>
-                                  <span class="label label-keyword">Newrelic</span>
-                                  <span class="label label-keyword">OpenShift</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Intermediate" data-placement="left">
-                                <div class="skill-progress intermediate">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>C/C++</strong>
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">OpenCV</span>
-                                  <span class="label label-keyword">Qt</span>
-                                  <span class="label label-keyword">FFmpeg</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Intermediate" data-placement="left">
-                                <div class="skill-progress intermediate">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Javascript</strong>
+            <article class="four columns">
+              <h3>Russian</h3>
+              <p></p>
+            </article>
 
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">AngularJS</span>
-                                  <span class="label label-keyword">Node.js</span>
-                                  <span class="label label-keyword">jQuery</span>
-                                  <span class="label label-keyword">jQuery UI</span>
-                                  <span class="label label-keyword">D3.js</span>
-                                  <span class="label label-keyword">Processing.js</span>
-                                  <span class="label label-keyword">Backbone.js</span>
-                                  <span class="label label-keyword">Socket.IO</span>
-                                  <span class="label label-keyword">Underscore.js</span>
-                                  <span class="label label-keyword">Velocity.js</span>
-                                  <span class="label label-keyword">Bower</span>
-                                  <span class="label label-keyword">phantomjs</span>
-                                  <span class="label label-keyword">casperjs</span>
-                                  <span class="label label-keyword">mustache.js</span>
-                                  <span class="label label-keyword">Moment.js</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Intermediate" data-placement="left">
-                                <div class="skill-progress intermediate">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>HTML/CSS</strong>
-
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Foundation</span>
-                                  <span class="label label-keyword">Twitter Bootstrap</span>
-                                  <span class="label label-keyword">Less Framework</span>
-                                  <span class="label label-keyword">Skeleton</span>
-                                  <span class="label label-keyword">Pure</span>
-                                  <span class="label label-keyword">LESS</span>
-                                  <span class="label label-keyword">SASS</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Intermediate" data-placement="left">
-                                <div class="skill-progress intermediate">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>DB</strong>
-
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Mongo</span>
-                                  <span class="label label-keyword">SQLite</span>
-                                  <span class="label label-keyword">PL/SQL</span>
-                                  <span class="label label-keyword">Oracle Database</span>
-                                  <span class="label label-keyword">PostgreSQL</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Intermediate" data-placement="left">
-                                <div class="skill-progress intermediate">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>OS</strong>
-
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Windows</span>
-                                  <span class="label label-keyword">Linux</span>
-                                  <span class="label label-keyword">Unix</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="card card-nested card-skills">
-                              <div class="skill-level" rel="tooltip" title="Beginner" data-placement="left">
-                                <div class="skill-progress beginner">
-                                </div>
-                              </div>
-                            <div class="skill-info">
-                              <strong>Programming language</strong>
-
-                              <div class="space-top labels">
-                                  <span class="label label-keyword">Ruby/RoR</span>
-                                  <span class="label label-keyword">PHP</span>
-                                  <span class="label label-keyword">Objective-C</span>
-                                  <span class="label label-keyword">Pascal</span>
-                                  <span class="label label-keyword">Delphi</span>
-                                  <span class="label label-keyword">Dart</span>
-                                  <span class="label label-keyword">R</span>
-                                  <span class="label label-keyword">Scala</span>
-                                  <span class="label label-keyword">Clojure</span>
-                              </div>
-                            </div>
-                          </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-              <div class="detail" id="education">
-                <div class="icon">
-                  <i class="fa fa-lg fa-mortar-board"></i>
-                  <span class="mobile-title">Education</span>
-                </div>
-                <div class="info">
-                  <h4 class="title text-uppercase">
-                    Education
-                  </h4>
-
-                  <div class="content">
-                    <ul class="list-unstyled">
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Googling Stackoverflow, Honorary doctorate</strong>,&nbsp;
-                              ARPANET
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Oct, 1991 -
-                                  Jan, 2038
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Business Psychology, Bachelor (unfinished)</strong>,&nbsp;
-                              RISEBA
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2013 -
-                                  Sep, 2014
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Computer Science, Bachelor (unfinished)</strong>,&nbsp;
-                              University of Latvia
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2010 -
-                                  Sep, 2013
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Language, Courses</strong>,&nbsp;
-                              Goethe institut
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2007 -
-                                  Apr, 2009
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                                <span class="label label-keyword">Deutsch - Basic</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Language, Courses</strong>,&nbsp;
-                              University of Latvia
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2007 -
-                                  Jun, 2008
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                                <span class="label label-keyword">English - Basic</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Computer Science, Courses</strong>,&nbsp;
-                              Progmeistars
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2005 -
-                                  Jun, 2010
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                                <span class="label label-keyword">MS Logo - Basic</span>
-                                <span class="label label-keyword">Pascal - Basic</span>
-                                <span class="label label-keyword">OOP - Basic</span>
-                                <span class="label label-keyword">Java - Basic</span>
-                                <span class="label label-keyword">C/Unix - Basic</span>
-                                <span class="label label-keyword">C++ - Basic</span>
-                                <span class="label label-keyword">C#/DirectX - Basic</span>
-                                <span class="label label-keyword">System administration - Basic</span>
-                                <span class="label label-keyword">Python - Basic</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="card card-nested">
-                          <div class="content">
-                            <p class="clear-margin relative">
-
-                              <strong>Other, School</strong>,&nbsp;
-                              Optional School for Gifted Children
-                            </p>
-                            <p class="text-muted">
-                              <small>
-                                Sep, 2000 -
-                                  Aug, 2008
-                              </small>
-                            </p>
-                            <i></i>
-                            <div class="space-top labels">
-                            </div>
-                          </div>
-                        </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
+        </div>
+      </section>
+    <!-- /LANGUAGES -->
 
-
-
-
-                <div class="detail" id="interests">
-                  <div class="icon">
-                    <i class="fa fa-lg fa-heart"></i>
-                    <span class="mobile-title">Interests</span>
-                  </div>
-                  <div class="info">
-                    <h4 class="title text-uppercase">
-                      Interests
-                    </h4>
-
-                    <div class="content">
-                      <ul class="list-unstyled">
-                          <li class="card card-nested">
-                            <p>
-                              <strong>Dance</strong>
-                            </p>
-
-                            <div class="space-top labels">
-                                <span class="label label-keyword">Salsa</span>
-                                <span class="label label-keyword">ChaCha</span>
-                                <span class="label label-keyword">Bachata</span>
-                                <span class="label label-keyword">Kizomba</span>
-                                <span class="label label-keyword">Tango</span>
-                            </div>
-                          </li>
-                          <li class="card card-nested">
-                            <p>
-                              <strong>Sport</strong>
-                            </p>
-
-                            <div class="space-top labels">
-                                <span class="label label-keyword">Football</span>
-                                <span class="label label-keyword">Volleyball</span>
-                                <span class="label label-keyword">Table tennis</span>
-                                <span class="label label-keyword">Cue sports</span>
-                                <span class="label label-keyword">Roller skates</span>
-                            </div>
-                          </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
-  <script type="text/javascript">
-/* <![CDATA[ */
-(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
-/* ]]> */
-</script>
+    <!-- INTERESTS -->
+    <!-- /INTERESTS -->
+  </main>
 </body>
+
 </html>

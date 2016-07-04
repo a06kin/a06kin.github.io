@@ -1,447 +1,214 @@
 {
-  "name": "Aleksandr Anohin",
-  "meta": {
-    "format": "FRESH@0.3.0",
-    "version": "0.1.0"
-  },
-  "info": {
-    "label": "Software Developer",
-    "brief": "",
-    "image": ""
-  },
-  "contact": {
-    "website": "http://www.aan.lv",
-    "phone": "+37126119258",
+  "basics": {
+    "name": "Aleksandr Anohin",
+    "label": "Software developer",
+    "picture": "http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png?s=400",
     "email": "a06kin@gmail.com",
-    "other": []
-  },
-  "location": {
-    "address": "Imanta",
-    "city": "Riga",
-    "code": "1069",
-    "country": "LV"
-  },
-  "social": [
-    {
-      "label": "Github",
-      "network": "GitHub",
-      "user": "a06kin",
-      "url": "https://github.com/a06kin"
-    },
-    {
-      "label": "Keybase",
-      "network": "Keybase",
-      "user": "aaa",
-      "url": "https://keybase.io/aaa"
-    }
-  ],
-  "employment": {
+    "phone": "(+371) 26119258",
+    "website": "http://www.aan.lv",
     "summary": "",
-    "history": [
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Riga",
+      "countryCode": "LV",
+      "region": "Latvia"
+    },
+    "profiles": [
       {
-        "employer": "Skywind group",
-        "url": "http://cte.lv/",
-        "position": "Java developer",
-        "summary": "Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements.",
-        "start": "2015-05",
-        "end": "present",
-        "keywords": ["Java"],
-        "highlights": [
-          "Developing new components & functionality to existing systems",
-          "Investigate new tools to the team",
-          "Developing new functionalities - back-end and front-end.",
-          "Writing unit and other tests"
-        ]
+        "network": "github",
+        "username": "a06kin",
+        "url": "https://github.com/a06kin"
       },
       {
-        "employer": "Progmeistars",
-        "url": "http://www.progmeistars.lv/",
-        "position": "Teacher",
-        "summary": "Working with small groups of children up to 12 people. Teaching the basics of programming.",
-        "start": "2011-09",
-        "end": "present",
-        "keywords": ["Java", "Teacher"],
-        "highlights": [
-          "Work with children of different age groups",
-          "Developing training programs"
-        ]
-      },
-      {
-        "employer": "Progmeistars",
-        "url": "http://www.progmeistars.lv/",
-        "position": "System administrator",
-        "summary": "Working as technical lead to identify and implement solutions to problems affecting IT services",
-        "start": "2011-01",
-        "end": "present",
-        "keywords": ["Windows", "Linux", "Unix"],
-        "highlights": [
-          "Installation and maintenance of all systems",
-          "Building, configuration and troubleshooting server and desktop hardware",
-          "Providing consultation and advice on selection IT equipment"
-        ]
-      },
-      {
-        "employer": "Tarento Latvia",
-        "url": "http://www.qube.lv/",
-        "position": "Java developer",
-        "summary": "",
-        "start": "2015-03",
-        "end": "2015-05",
-        "keywords": ["Java"],
-        "highlights": []
-      },
-      {
-        "employer": "Apply IT",
-        "url": "http://www.applyit.lv/",
-        "position": "Java developer",
-        "summary": "",
-        "start": "2014-09",
-        "end": "2014-12",
-        "keywords": ["Java", "PHP", "JavaScript"],
-        "highlights": []
-      },
-      {
-        "employer": "Autentica",
-        "url": "http://www.autentica.lv/",
-        "position": "Java developer",
-        "summary": "",
-        "start": "2012-01",
-        "end": "2014-09",
-        "keywords": ["Java"],
-        "highlights": []
-      },
-      {
-        "employer": "Previous Employer",
-        "url": "http://employer-website.com",
-        "position": "Worker Bee",
-        "summary": "A summary of your previous role. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "start": "2009-07",
-        "end": "2013-10",
-        "keywords": [],
-        "highlights": [
-          "Increased profits on left-handed spin widgets by 35%.",
-          "Participated in iterative/incremental tiddlywink development.",
-          "Promoted to Head Ninja after 500 successful cage matches."
-        ]
+        "network": "check",
+        "username": "aaa",
+        "url": "https://keybase.io/aaa"
       }
     ]
   },
-  "projects": [
+  "work": [
     {
-      "title": "Awesome Project #1",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "SEB dziviba - страхование",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "SEB ebank",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "Latvijas mezi",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "LAD - lauku atbalsta dienests",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "EPS - elektroniska pieteikuma sistema",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "Spica",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "Delaval - client system",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "CTE - casino",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    },
-    {
-      "title": "Dreamsquare",
-      "category": "FOSS",
-      "url": "http://project-page.org",
-      "repo": "https://project-repo.com",
-      "media": [],
-      "role": "Contributor",
-      "summary": "A summary of your role on the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "description": "A description of the project. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-      "highlights": [],
-      "keywords": []
-    }
-  ],
-  "education": {
-    "summary": "Optional overall education summary. Not used in most themes.",
-    "level": "degree",
-    "degree": "BSCS",
-    "history": [
-      {
-        "institution": "School of Life",
-        "url": "http://your-college.edu",
-        "start": "2004-09",
-        "end": "2009-06",
-        "grade": "",
-        "summary": "",
-        "curriculum": []
-      }
-    ]
-  },
-  "service": {
-    "summary": "",
-    "history": [
-      {
-        "flavor": "volunteer",
-        "position": "Volunteer Coordinator",
-        "organization": "The Mommies Network",
-        "url": "http://themommiesnetwork.org",
-        "start": "2006-06",
-        "summary": "A summary of your volunteer experience at this organization. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "highlights": []
-      },
-      {
-        "flavor": "military",
-        "position": "MOS",
-        "organization": "Air Force",
-        "url": "https://service-website.mil",
-        "start": "2004",
-        "summary": "A summary of your service experience with this organization. Can include **Markdown** and inline <strong>HTML</strong> formatting.",
-        "highlights": []
-      }
-    ]
-  },
-  "skills": {
-    "sets": [
-      {
-        "name": "Web Development",
-        "level": "advanced",
-        "skills": [
-          "LAMP",
-          "JavaScript",
-          "HTML 5",
-          "Angular.js",
-          "jQuery",
-          "Sass",
-          "LESS"
-        ]
-      },
-      {
-        "name": "Ninjitsu",
-        "level": "intermediate",
-        "skills": [
-          "Tokagure Ryu",
-          "Shuriken",
-          "Yogen"
-        ]
-      },
-      {
-        "name": "Dance",
-        "level": "intermediate",
-        "skills": [
-          "Salsa",
-          "Tango",
-          "Bachata",
-          "Kizomba",
-          "Cha-cha"
-        ]
-      }
-    ],
-    "list": []
-  },
-  "samples": [
-    {
-      "title": "Work Sample",
-      "summary": "Description or summary of the work sample.",
-      "url": "http://project-repo.com",
-      "date": "2015"
-    }
-  ],
-  "writing": [
-    {
-      "title": "",
-      "flavor": "",
-      "date": "",
-      "publisher": {
-        "name": "",
-        "url": ""
-      },
-      "url": ""
-    }
-  ],
-  "reading": [
-    {
-      "title": "Other Copenhagens",
-      "flavor": "book",
-      "url": "http://www.amazon.com/Other-Copenhagens-And-Stories/dp/0984749209",
-      "author": "Edmund Jorgensen"
-    },
-    {
-      "title": "r/programming",
-      "flavor": "website",
-      "url": "https://www.reddit.com/r/programming"
-    },
-    {
-      "title": "Hacker News",
-      "flavor": "website",
-      "url": "https://news.ycombinator.com/"
-    }
-  ],
-  "recognition": [
-    {
-      "flavor": "award",
-      "from": "HackMyResume",
-      "title": "Awesomeness Award",
-      "event": "HMR Release",
-      "date": "2016",
-      "summary": "For being a HackMyResume or FluentCV user."
-    },
-    {
-      "flavor": "industry",
-      "from": "Big Software",
-      "title": "MVP: SpinWidget Technology",
-      "event": "Yearly Roundup",
-      "date": "2015-08-03",
-      "summary": "For work in promotion and popularization of SpinWidget technology."
-    }
-  ],
-  "references": [
-    {
-      "name": "John Doe",
-      "flavor": "professional",
-      "private": true,
-      "contact": [
-        {
-          "flavor": "email",
-          "value": "john.doe@somewhere.com"
-        }
+      "company": "Skywind group",
+      "website": "http://www.skywindgroup.com/",
+      "position": "Java developer",
+      "summary": "Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements;",
+      "startDate": "2015-05-01",
+      "keywords": [
+        "Java"
+      ],
+      "highlights": [
+        "Developing new components & functionality to existing systems",
+        "Investigate new tools to the team",
+        "Developing new functionalities - back-end and front-end",
+        "Writing unit (and other) tests"
       ]
     },
     {
-      "name": "Jane Q. Fullstacker",
-      "flavor": "technical",
-      "private": true,
-      "contact": [
-        {
-          "flavor": "email",
-          "value": "jane.fullstacker@somewhere.com"
-        }
+      "company": "Tarento Latvia",
+      "website": "http://www.qube.lv/",
+      "position": "Java developer",
+      "summary": "Working in a small team with a clear division of responsibilities. Development of internal system for easy work with clients;",
+      "startDate": "2015-03-01",
+      "endDate": "2015-05-01",
+      "keywords": [
+        "Java",
+        "JavaFX"
+      ],
+      "highlights": []
+    },
+    {
+      "company": "Apply IT",
+      "website": "http://www.applyit.lv/",
+      "position": "Java developer",
+      "summary": "Development the solution to show the possibility of moving inside the store. Adapting an existing site for the big stands with touchscreen;",
+      "startDate": "2014-09-01",
+      "endDate": "2014-12-01",
+      "keywords": [
+        "Java",
+        "PHP",
+        "JavaScript",
+        "C"
+      ],
+      "highlights": []
+    },
+    {
+      "company": "Autentica",
+      "website": "http://www.autentica.lv/",
+      "position": "Java developer",
+      "summary": "Development of various systems for users.",
+      "startDate": "2012-01-01",
+      "endDate": "2014-09-01",
+      "keywords": [
+        "Java"
+      ],
+      "highlights": [
+        "Developing new functionalities - back-end and front-end",
+        "Communicating with customer to provide the best product"
+      ]
+    },
+    {
+      "company": "Progmeistars",
+      "website": "http://www.progmeistars.lv/",
+      "position": "System administrator",
+      "summary": "Working as technical lead to identify and implement solutions to problems affecting IT services;",
+      "startDate": "2011-01-01",
+      "keywords": [
+        "Windows",
+        "Linux",
+        "Unix"
+      ],
+      "highlights": [
+        "Installation and maintenance of all systems",
+        "Building, configuration and troubleshooting server and desktop hardware",
+        "Providing consultation and advice on selection IT equipment"
+      ]
+    },
+    {
+      "company": "Progmeistars",
+      "website": "http://www.progmeistars.lv/",
+      "position": "Teacher",
+      "summary": "Working with small groups of children up to 12 people. Teaching the basics of programming. Mainly java & c/unix;",
+      "startDate": "2011-09-01",
+      "keywords": [
+        "Java",
+        "Teacher"
+      ],
+      "highlights": [
+        "Work with children of different age groups",
+        "Developing training programs"
       ]
     }
   ],
-  "testimonials": [
+  "education": [
     {
-      "name": "John Doe",
-      "flavor": "technical",
-      "quote": "Such-and-such is awesome! I'd hire him/her in a second!"
+      "institution": "RISEBA",
+      "area": "Business Psychology (incomplete)",
+      "startDate": "2013-09-01",
+      "endDate": "2014-09-01",
+      "studyType": "Bachelor"
+    },
+    {
+      "institution": "University of Latvia",
+      "area": "Information Technology (incomplete)",
+      "studyType": "Bachelor",
+      "startDate": "2010-09-01",
+      "endDate": "2013-09-01",
+      "courses": [
+        "OOP",
+        "C/C++"
+      ]
+    },
+    {
+      "institution": "Progmeistars",
+      "area": "Information Technology",
+      "studyType": "Courses",
+      "startDate": "2005-09-01",
+      "endDate": "2010-06-30",
+      "courses": [
+        "OOP",
+        "Java",
+        "C/Unix"
+      ]
+    },
+    {
+      "institution": "ARPANET",
+      "area": "Googling Stackoverflow",
+      "studyType": "Honorary doctorate",
+      "startDate": "1970-01-01",
+      "endDate": "2038-01-19",
+      "courses": [
+        "Google",
+        "Stackoverflow"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Back-end Development",
+      "level": "Advanced",
+      "keywords": [
+        "Java",
+        "Spring",
+        "MyBatis",
+        "JUnit",
+        "PlayFramework"
+      ]
+    },
+    {
+      "name": "Front-end Development",
+      "level": "Advanced",
+      "keywords": [
+        "JavaScript",
+        "CoffeScript",
+        "Angular 2",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "name": "Dance",
+      "level": "Advanced",
+      "keywords": [
+        "Salsa",
+        "Tango",
+        "Bachata",
+        "Kizomba",
+        "Cha-cha"
+      ]
     }
   ],
   "languages": [
     {
       "language": "English",
-      "level": "native"
-    },
-    {
-      "language": "Spanish",
       "level": "advanced"
-    }
-  ],
-  "interests": [
-    {
-      "name": "GitHub",
-      "summary": "Regular GitHub user and tinkerer.",
-      "keywords": [
-        "GitHub",
-        "git",
-        "GitHub Desktop (OS X)",
-        "LFS",
-        "GitHub API"
-      ]
     },
     {
-      "name": "chess",
-      "summary": "Avid chess player.",
-      "keywords": [
-        "Sicilian",
-        "King's Gambit",
-        "Ruy Lopez"
-      ]
+      "language": "Latvian",
+      "level": "advanced"
+    },
+    {
+      "language": "Russian",
+      "level": "native"
     }
   ]
 }

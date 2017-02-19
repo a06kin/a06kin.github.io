@@ -6,7 +6,7 @@
     "email": "a06kin@gmail.com",
     "phone": "(+371) 26119258",
     "website": "http://www.aan.lv",
-    "summary": "",
+    "summary": "I'm Alex. Computational neuroscience, machine learning, functional programming it is only a small part of what I'm interested in free time. If you have cool challenges on this subjects - please contact me. Otherwise - I'm a good java software developer; ",
     "location": {
       "address": "",
       "postalCode": "",
@@ -24,6 +24,11 @@
         "network": "check",
         "username": "aaa",
         "url": "https://keybase.io/aaa"
+      },
+      {
+        "network": "linkedin",
+        "username": "aanohins",
+        "url": "https://www.linkedin.com/in/aanohin"
       }
     ]
   },
@@ -35,40 +40,29 @@
       "summary": "Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements;",
       "startDate": "2015-05-01",
       "keywords": [
-        "Java"
+        "Java",
+        "Scala",
+        "SQL",
+        "TypeScript"
       ],
       "highlights": [
         "Developing new components & functionality to existing systems",
         "Investigate new tools to the team",
         "Developing new functionalities - back-end and front-end",
-        "Writing unit (and other) tests"
+        "Writing tests"
       ]
     },
     {
       "company": "Tarento Latvia",
       "website": "http://www.qube.lv/",
       "position": "Java developer",
-      "summary": "Working in a small team with a clear division of responsibilities. Development of internal system for easy work with clients;",
+      "summary": "Working in a small team with a clear division of responsibilities. Development of internal system for client;",
       "startDate": "2015-03-01",
       "endDate": "2015-05-01",
       "keywords": [
         "Java",
-        "JavaFX"
-      ],
-      "highlights": []
-    },
-    {
-      "company": "Apply IT",
-      "website": "http://www.applyit.lv/",
-      "position": "Java developer",
-      "summary": "Development the solution to show the possibility of moving inside the store. Adapting an existing site for the big stands with touchscreen;",
-      "startDate": "2014-09-01",
-      "endDate": "2014-12-01",
-      "keywords": [
-        "Java",
-        "PHP",
-        "JavaScript",
-        "C"
+        "JavaFX",
+        "SQL"
       ],
       "highlights": []
     },
@@ -80,7 +74,9 @@
       "startDate": "2012-01-01",
       "endDate": "2014-09-01",
       "keywords": [
-        "Java"
+        "Java",
+        "Ruby",
+        "SQL"
       ],
       "highlights": [
         "Developing new functionalities - back-end and front-end",
@@ -93,13 +89,13 @@
       "position": "System administrator",
       "summary": "Working as technical lead to identify and implement solutions to problems affecting IT services;",
       "startDate": "2011-01-01",
+      "endDate": "2017-01-01",
       "keywords": [
-        "Windows",
-        "Linux",
-        "Unix"
+        "Linux/Unix",
+        "Windows"
       ],
       "highlights": [
-        "Installation and maintenance of all systems",
+        "Installation and maintenance all systems",
         "Building, configuration and troubleshooting server and desktop hardware",
         "Providing consultation and advice on selection IT equipment"
       ]
@@ -108,8 +104,9 @@
       "company": "Progmeistars",
       "website": "http://www.progmeistars.lv/",
       "position": "Teacher",
-      "summary": "Working with small groups of children up to 12 people. Teaching the basics of programming. Mainly java & c/unix;",
+      "summary": "Working with small groups of children up to 12 people. Teaching the basics of programming. Java & c/unix;",
       "startDate": "2011-09-01",
+      "endDate": "2017-01-01",
       "keywords": [
         "Java",
         "Teacher"
@@ -135,6 +132,7 @@
       "startDate": "2010-09-01",
       "endDate": "2013-09-01",
       "courses": [
+      	"Math",
         "OOP",
         "C/C++"
       ]
@@ -179,10 +177,8 @@
       "name": "Front-end Development",
       "level": "Advanced",
       "keywords": [
-        "JavaScript",
-        "CoffeeScript",
-        "Angular 2",
-        "HTML/CSS"
+        "TypeScript",
+        "JS/HTML/CSS"
       ]
     },
     {

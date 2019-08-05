@@ -2,14 +2,12 @@
   "basics": {
     "name": "Aleksandr Anohin",
     "label": "Software developer",
-    "picture": "http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png?s=400",
+    "picture": "pics/aaa.jpeg",
     "email": "a06kin@gmail.com",
     "phone": "(+371) 26119258",
     "website": "http://www.aan.lv",
-    "summary": "I'm Alex. Computational neuroscience, machine learning, functional programming it is only a small part of what I'm interested in free time. If you have cool challenges on this subjects - please contact me. Otherwise - I'm a good java software developer; ",
+    "summary": "Computational neuroscience, machine learning, functional programming it is only a small part of what I'm interested in free time. If you have cool challenges on this subjects - please contact me. Otherwise - I'm a good java software developer; ",
     "location": {
-      "address": "",
-      "postalCode": "",
       "city": "Riga",
       "countryCode": "LV",
       "region": "Latvia"
@@ -29,42 +27,61 @@
         "network": "linkedin",
         "username": "aanohins",
         "url": "https://www.linkedin.com/in/aanohin"
+      },
+      {
+        "network": "download",
+        "username": "download",
+        "url": "http://www.aan.lv/cv.pdf"
       }
     ]
   },
   "work": [
     {
+      "company": "Neueda",
+      "website": "https://www.neueda.com/",
+      "position": "Software engineer",
+      "summary": "Working in team (10+) with other developers on different projects",
+      "startDate": "2018-01-01",
+      "keywords": [
+        "Java",
+        "Kotlin",
+        "TypeScript",
+        "JS/HTML/CSS",
+        "Node/Electron"
+      ],
+      "highlights": [
+        "Developing Neo4j Desktop. A convenient way for developers to work with local Neo4j databases",
+        "Developing plugins for the Neo4j Desktop",
+        "Sprint planing (with client and with a team)",
+        "Demo and discussions with a client"
+      ]
+    },
+    {
       "company": "Skywind group",
       "website": "http://www.skywindgroup.com/",
       "position": "Java developer",
-      "summary": "Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements;",
+      "summary": "Working in team (20+) with other developers to build technical solutions for casino",
       "startDate": "2015-05-01",
-      "keywords": [
-        "Java",
-        "Scala",
-        "SQL",
-        "TypeScript"
-      ],
+      "endDate": "2018-01-01",
+      "keywords": ["Java", "Scala", "SQL", "TypeScript"],
       "highlights": [
         "Developing new components & functionality to existing systems",
-        "Investigate new tools to the team",
+        "Develop the hot-fixfor the production servers",
+        "Investigate new tools to the team (migration svn -> git)",
         "Developing new functionalities - back-end and front-end",
-        "Writing tests"
+        "Quick deployment and patching projects from other teams",
+        "Writing unit tests"
       ]
     },
     {
       "company": "Tarento Latvia",
       "website": "http://www.qube.lv/",
       "position": "Java developer",
-      "summary": "Working in a small team with a clear division of responsibilities. Development of internal system for client;",
+      "summary": "Working in a small team (3 dev) to build internal system for client - the worldwide leader in milking equipment for dairy farmers.",
       "startDate": "2015-03-01",
       "endDate": "2015-05-01",
-      "keywords": [
-        "Java",
-        "JavaFX",
-        "SQL"
-      ],
-      "highlights": []
+      "keywords": ["Java", "JavaFX", "SQL"],
+      "highlights": ["Developing UI for the client", "Sprint planning"]
     },
     {
       "company": "Autentica",
@@ -73,11 +90,7 @@
       "summary": "Development of various systems for users.",
       "startDate": "2012-01-01",
       "endDate": "2014-09-01",
-      "keywords": [
-        "Java",
-        "Ruby",
-        "SQL"
-      ],
+      "keywords": ["Java", "Ruby", "SQL"],
       "highlights": [
         "Developing new functionalities - back-end and front-end",
         "Communicating with customer to provide the best product"
@@ -87,13 +100,10 @@
       "company": "Progmeistars",
       "website": "http://www.progmeistars.lv/",
       "position": "System administrator",
-      "summary": "Working as technical lead to identify and implement solutions to problems affecting IT services;",
+      "summary": "Working as technical lead to identify and implement solutions to problems affecting IT services",
       "startDate": "2011-01-01",
       "endDate": "2017-01-01",
-      "keywords": [
-        "Linux/Unix",
-        "Windows"
-      ],
+      "keywords": ["Unix", "Windows"],
       "highlights": [
         "Installation and maintenance all systems",
         "Building, configuration and troubleshooting server and desktop hardware",
@@ -104,13 +114,10 @@
       "company": "Progmeistars",
       "website": "http://www.progmeistars.lv/",
       "position": "Teacher",
-      "summary": "Working with small groups of children up to 12 people. Teaching the basics of programming. Java & c/unix;",
+      "summary": "Working with small groups of children up to 12. Teaching the basics of programming. Java & c/unix",
       "startDate": "2011-09-01",
       "endDate": "2017-01-01",
-      "keywords": [
-        "Java",
-        "Teacher"
-      ],
+      "keywords": ["Java", "C", "Teacher"],
       "highlights": [
         "Work with children of different age groups",
         "Developing training programs"
@@ -123,7 +130,8 @@
       "area": "Business Psychology (incomplete)",
       "startDate": "2013-09-01",
       "endDate": "2014-09-01",
-      "studyType": "Bachelor"
+      "studyType": "Bachelor",
+      "courses": ["Psychology", "Economics"]
     },
     {
       "institution": "University of Latvia",
@@ -131,11 +139,7 @@
       "studyType": "Bachelor",
       "startDate": "2010-09-01",
       "endDate": "2013-09-01",
-      "courses": [
-      	"Math",
-        "OOP",
-        "C/C++"
-      ]
+      "courses": ["Math", "OOP", "C/C++"]
     },
     {
       "institution": "Progmeistars",
@@ -143,11 +147,7 @@
       "studyType": "Courses",
       "startDate": "2005-09-01",
       "endDate": "2010-06-30",
-      "courses": [
-        "OOP",
-        "Java",
-        "C/Unix"
-      ]
+      "courses": ["OOP", "Java", "C/Unix"]
     },
     {
       "institution": "ARPANET",
@@ -155,56 +155,31 @@
       "studyType": "Honorary doctorate",
       "startDate": "1970-01-01",
       "endDate": "2038-01-19",
-      "courses": [
-        "Google",
-        "Stackoverflow"
-      ]
+      "courses": ["Google", "Stackoverflow"]
     }
   ],
-  "skills": [
+  "interests": [
     {
-      "name": "Back-end Development",
-      "level": "Advanced",
-      "keywords": [
-        "Java",
-        "Spring",
-        "MyBatis",
-        "JUnit",
-        "PlayFramework"
-      ]
+      "name": "Dancing",
+      "keywords": ["Salsa", "Tango", "Bachata", "Kizomba", "Cha-cha"]
     },
     {
-      "name": "Front-end Development",
-      "level": "Advanced",
-      "keywords": [
-        "TypeScript",
-        "JS/HTML/CSS"
-      ]
-    },
-    {
-      "name": "Dance",
-      "level": "Advanced",
-      "keywords": [
-        "Salsa",
-        "Tango",
-        "Bachata",
-        "Kizomba",
-        "Cha-cha"
-      ]
+      "name": "FPV",
+      "keywords": ["Drones"]
     }
   ],
   "languages": [
     {
       "language": "English",
-      "level": "advanced"
+      "fluency": "advanced"
     },
     {
       "language": "Latvian",
-      "level": "advanced"
+      "fluency": "advanced"
     },
     {
       "language": "Russian",
-      "level": "native"
+      "fluency": "Native speaker"
     }
   ]
 }

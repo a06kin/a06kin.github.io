@@ -1,1232 +1,1252 @@
 <!doctype html>
 <html>
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<title>Aleksandr Anohin</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-		<style>
-			/********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/****************
-*	COMMONS
-****************/
-body, html {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 13px;
-    color: #40484f;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.46153846;
-    text-align: left;
-    webkit-text-size-adjust: 100%;
-}
-
-p {
-    display: block;
-    margin-bottom: 1.3em;
-}
-
-a {
-    /*color: #0095ff;*/
-    color: #0095F2;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0c65a5;
-    text-decoration: underline;
-}
-
-ul {
-    margin-top: 1rem;
-}
-
-li {
-    list-style-type: square;
-    list-style-position: outside;
-    margin-left: 1.3em;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.67rem;
-}
-
-h3 {
-    font-size: 1.27rem;
-}
-
-em {
-    color: #757575;
-}
-
-blockquote {
-    margin-bottom: 1em;
-}
-
-strong {
-    font-weight: 700;
-}
-
-/* main container */
-#resume {
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-/* every section wrapper */
-.section {
-    margin-bottom: 1rem;
-}
-
-section .location {
-    margin-right: .5em;
-    color: #606d76;
-    font-weight: 700;
-}
-
-#contact {
-    margin-top: .5rem;
-}
-
-#profiles .item {
-    padding: 0;
-}
-
-#header > #profiles,
-#header > #contact,
-#skills,
-#languages,
-#interests {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-}
-
-#header > div {
-    line-height: 1.5;
-}
-
-#header > div > div {
-    margin-right: 1.2em;
-}
-
-#header h1.name {
-    font-size: 2.8rem;
-    font-weight: 100;
-    line-height: 100%;
-}
-
-#header h2.label {
-    color: #202931;
-    font-size: 1.47rem;
-    font-weight: 300;
-}
-
-#header .picture {
-    width: 11em;
-    float: right;
-    border-radius: 4px;
-}
-
-.main-summary {
-    background: #f1f8ff;
-    padding: 1.2em 1em;
-    margin-top: 1rem;
-}
-
-.main-summary p {
-    margin: .15em 0 0;
-}
-
-h2.section-title {
-    display: inline-block;
-    background: #fff;
-    padding: 0 1em 0.3em 0;
-    color: #ff6d1f;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    font-size: .9rem;
-}
-
-.section > header {
-    position: relative;
-}
-
-.fa {
-    margin-right: 0.25em;
-}
-
-.section > header::after {
-    position: absolute;
-    left: 0;
-    top: .7em;
-    height: 1px;
-    background: #ccc;
-    content: "";
-    width: 100%;
-    z-index: -100;
-    display: block;
-}
-
-.section.main-summary > section {
-    margin: 0;
-}
-
-.section > section > header {
-    font-size: 1.38rem;
-    position: relative;
-    margin-top: .7em;
-}
-
-.section > section > header:first-of-type {
-    margin: 0;
-}
-
-.section > section > header .space-left {
-    position: absolute;
-    left: -1.56rem;
-    top: 5px;
-    color: #aaa;
-    line-height: 1;
-    opacity: 0;
-}
-
-.position,
-.company,
-.organization,
-.institution,
-.date,
-.area,
-.studyType,
-.title,
-.awarder {
-    display: inline;
-}
-
-.position,
-.studyType,
-.area,
-.title,
-.language,
-.name {
-    font-weight: 600;
-}
-
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-    content: "at "
-}
-
-.company,
-.institution,
-.organization,
-.awarder {
-    color: #606d76;
-    font-weight: 400;
-}
-
-.section header .date {
-    font-size: 1rem;
-    display: inline-table;
-    padding: .1em 0;
-    font-weight: 600;
-}
-
-ul.keywords,
-ul.courses {
-    margin-top: .5em;
-}
-
-ul.keywords li,
-ul.courses li {
-    display: inline-block;
-    margin: 2px 2px 2px 0;
-    padding: 4px 5px 5px;
-    font-size: .9rem;
-    line-height: 1;
-    text-transform: lowercase;
-    color: #3e6d8e;
-    background-color: #dfeaf1;
-    border: 0 solid #dfeaf1;
-    white-space: nowrap;
-}
-
-ul.keywords li:hover,
-ul.courses li:hover {
-    background: #dfeaf0;
-}
-
-.item {
-    padding: .5em 0;
-}
-
-.gpa {
-    padding-bottom: .5em;
-}
-
-.fa.social {
-    font-size: 1.1em;
-}
-
-/* Social Media Brand Colors */
-.google-plus {
-    color: #dd4b39;
-}
-
-.tumblr {
-    color: #32506d;
-}
-
-.foursquare {
-    color: #0072b1;
-}
-
-.facebook {
-    color: #3b5998;
-}
-
-.linkedin {
-    color: #007bb6;
-}
-
-.pinterest {
-    color: #cb2027;
-}
-
-.dribbble {
-    color: #ea4c89;
-}
-
-.instagram {
-    color: #517fa4;
-}
-
-.twitter {
-    color: #00aced;
-}
-
-.soundcloud {
-    color: #ff3a00;
-}
-
-.wordpress {
-    color: #21759b;
-}
-
-.youtube {
-    color: #bb0000;
-}
-
-.github {
-    color: #171515;
-}
-
-.stack-overflow {
-    color: #828386;
-    position: relative;
-}
-
-.flickr {
-    color: #ff0084;
-}
-
-.stack-overflow::after {
-    position: absolute;
-    left: 0;
-    content: '\f16c';
-    color: #f68a1f;
-    overflow: hidden;
-    height: 40%;
-}
-
-#languages .item,
-#skills .item,
-#interests .item {
-    width: 15em;
-    padding: 0 .5em .5em 0;
-    border-bottom: none;
-}
-
-#skills .item {
-    width: 16em;
-}
-
-#skills .item .keywords {
-    width: 15em;
-}
-
-/* Skill chart */
-.level {
-    margin-bottom: .5em;
-}
-
-.level .bar {
-    border: 1px solid #ddd;
-    display: block;
-    width: 10em;
-    height: 5px;
-    position: relative;
-}
-
-.level .bar::after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    background: black;
-    height: 5px;
-}
-
-.level.beginner .bar::after {
-    background: #EB5F51;
-    width: 2.5em;
-}
-
-.level.intermediate .bar::after {
-    background: #ffdf1f;
-    width: 5em;
-}
-
-.level.advanced .bar::after,
-.level.fluent .bar::after {
-    background: #5CB85C;
-    width: 7.5em;
-}
-
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-    background: #59C596;
-    width: 10em;
-}
-
-#references .item {
-    padding-left: .5em;
-    border-left: 5px solid #ff6d1f;
-}
-
-/******************
-*	HELPER CLASSES
-******************/
-
-.clear::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.display {
-    display: block;
-    opacity: 1 !important;
-}
-
-.margin1 {
-    margin-bottom: .5rem;
-}
-
-/****************
-*		TABLET
-****************/
-@media screen and (min-width: 602px) {
-    #resume {
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-
-/****************
-*		LAPTOP
-****************/
-@media screen and (min-width: 1025px) {
-    li {
-        margin-left: 1.5em;
-    }
-
-    #resume {
-        width: 820px;
-        margin: 2rem auto;
-        opacity: 0;
-        -webkit-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
-    }
-
-    .section > section > header .space-left {
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .section > section {
-        margin-left: 1.67rem;
-    }
-
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "| ";
-    }
-
-    .header-left {
-        float: left;
-        width: 70%;
-        word-break: normal;
-    }
-
-    .section header .date {
-        float: right;
-        padding: .2em;
-    }
-
-    .display {
-        display: none;
-    }
-
-    .display:not(.none) {
-        display: block;
-    }
-
-}
-
-@media print {
-
-    #resume {
-        margin: 0;
-        padding: 0;
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        line-height: 1.3;
-        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
-    }
-
-    @page {
-        margin: 1cm 1.4cm;
-    }
-
-    .item-count {
-        display: none;
-    }
-
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "at ";
-    }
-
-    .main-summary {
-        padding: 2rem 0;
-    }
-
-    .section {
-        margin: .8rem 0;
-        padding: 0;
-    }
-
-    .section header {
-        padding-bottom: .15rem;
-    }
-
-    .section .location {
-        padding-bottom: .15rem;
-    }
-    .stack-overflow::after {
-        content: "";
-    }
-
-    .fa.social {
-        color: #828386;
-    }
-
-    ul {
-        margin-top: .4em;
-    }
-
-    ul, li {
-        padding: 0;
-    }
-
-    ul.keywords li,
-    ul.courses li {
-        margin: 0;
-        padding: 0;
-        font-size: .8rem;
-        text-transform: lowercase;
-    }
-
-    ul.keywords li::after,
-    ul.courses li::after {
-        padding: 0 0 0 .1rem;
-        content: " |";
-    }
-
-    ul.keywords::before,
-    ul.courses::before {
-        font-size: .8rem;
-        font-weight: 600;
-    }
-
-    ul.keywords::before {
-        content: "Skills acquired: ";
-    }
-
-    #skills .keywords::before {
-        content: '';
-    }
-
-    .section p {
-        margin: 0;
-        padding: 0;
-    }
-
-    ul.courses::before {
-        content: "Major courses: ";
-    }
-
-    ul.keywords li:last-of-type::after,
-    ul.courses li:last-of-type::after {
-        content: "";
-    }
-
-    .level em {
-        font-style: normal;
-        padding: .1em 0;
-    }
-
-    .level .bar {
-        display: none;
-    }
-
-    #profiles .item {
-        padding: 0;
-    }
-
-    .item.display {
-        display: block;
-        opacity: 1 !important;
-    }
-}
-
-/** added by hearsid to allow wkhtmltopdf to create correct PDF, zoom 5 **/
-
-#skills, #languages {
-    display: block;
-}
-
-#skills .item, #languages .display {
-    display:inline-block;
-    width: 30%;
-    vertical-align: top;
-}
-
-		</style>
-	</head>
-
-	<body>
-		<div id="resume">
-				<header id="header" class="clear">
-						<img class="picture" src="http://www.gravatar.com/avatar/47acf4e8db31f80de4f704461a67ff69.png?s&#x3D;400" alt="Aleksandr Anohin"/>
-						<div class="middle">
-							<h1 class="name">Aleksandr Anohin</h1>
-							<h2 class="label">Software developer</h2>
-						</div>
-
-						<span class="location">
-								<span class="city">
-									Riga,
-								</span>
-								<span class="region">
-									Latvia
-								</span>
-								<span class="countryCode">
-									LV
-								</span>
-						</span>
-                    
-					<div id="contact">
-						<div class="website">
-              <span class="fa fa-external-link"></span>
-							<a target="_blank" href="http://www.aan.lv">http://www.aan.lv</a>
-						</div>
-						<div class="email">
-              <span class="fa fa-envelope-o"></span>
-							<a href="mailto:a06kin@gmail.com">a06kin@gmail.com</a>
-						</div>
-						<div class="phone">
-              <span class="fa fa-mobile"></span>
-							(+371) 26119258
-						</div>
-					</div>
-
-					<div id="profiles">
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-github github social"></span>
-									<span class="url">
-										<a href="https://github.com/a06kin">a06kin</a>
-									</span>
-								</div>
-						</div>
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-check check social"></span>
-									<span class="url">
-										<a href="https://keybase.io/aaa">aaa</a>
-									</span>
-								</div>
-						</div>
-						<div class="item">
-								<div class="username">
-									<span class="fa fa-linkedin linkedin social"></span>
-									<span class="url">
-										<a href="https://www.linkedin.com/in/aanohin">aanohins</a>
-									</span>
-								</div>
-						</div>
-					</div>
-				</header>
-
-					<section class="section main-summary">
-						<section>
-							<div><p>I'm Alex. Computational neuroscience, machine learning, functional programming it is only a small part of what I'm interested in free time. If you have cool challenges on this subjects - please contact me. Otherwise - I'm a good java software developer; </p></div>
-						</section>
-					</section>
-
-				<section class="section margin1">
-					<header>
-						<h2 class='section-title'>Skills</h2>
-					</header>
-					<section id="skills">
-						<div class="item">
-							<h3 class="name">
-								Back-end Development
-							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>Java</li>
-								<li>Spring</li>
-								<li>MyBatis</li>
-								<li>JUnit</li>
-								<li>PlayFramework</li>
-							</ul>
-						</div>
-						<div class="item">
-							<h3 class="name">
-								Front-end Development
-							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>TypeScript</li>
-								<li>JS/HTML/CSS</li>
-							</ul>
-						</div>
-						<div class="item">
-							<h3 class="name">
-								Dance
-							</h3>
-							<div class="level advanced">
-								<em>Advanced</em>
-								<div class="bar"></div>
-							</div>
-							<ul class="keywords">
-								<li>Salsa</li>
-								<li>Tango</li>
-								<li>Bachata</li>
-								<li>Kizomba</li>
-								<li>Cha-cha</li>
-							</ul>
-						</div>
-					</section>
-				</section>
-
-				<section class="section">
-					<header>
-						<h2 class='section-title'>Work Experience <span class="item-count">(5)</span></h2>
-					</header>
-					<section id="work">
-								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-down"></span>
-									</span>
-									<div class="position">
-										Java developer
-									</div>
-									<div class="company">
-										Skywind group
-									</div>
-									<div class="date">
-										<span class="startDate">
-											May 2015
-										</span>
-										<span class="endDate">
-											- Current
-										</span>
-									</div>
-								</header>
-
-                                <span class="website">
-                                    <a href="http://www.skywindgroup.com/">http://www.skywindgroup.com/</a>
-                                </span>
-
-								<ul class="keywords">
-									<li>Java</li>
-									<li>Scala</li>
-									<li>SQL</li>
-									<li>TypeScript</li>
-								</ul>
-
-								<div class="item display" style="opacity:1">
-									<div class="summary">
-										<p><p>Working in team with other developers to build technical solutions for casino. Complete projects to quality requirements;</p></p>
-									</div>
-									<ul class="highlights">
-											<li>Developing new components &amp; functionality to existing systems</li>
-											<li>Investigate new tools to the team</li>
-											<li>Developing new functionalities - back-end and front-end</li>
-											<li>Writing tests</li>
-									</ul>
-							</div>
-								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Java developer
-									</div>
-									<div class="company">
-										Tarento Latvia
-									</div>
-									<div class="date">
-										<span class="startDate">
-											March 2015
-										</span>
-										<span class="endDate">
-											- May 2015
-										</span>
-									</div>
-								</header>
-
-                                <span class="website">
-                                    <a href="http://www.qube.lv/">http://www.qube.lv/</a>
-                                </span>
-
-								<ul class="keywords">
-									<li>Java</li>
-									<li>JavaFX</li>
-									<li>SQL</li>
-								</ul>
-
-								<div class="item display none" style="opacity:0">
-									<div class="summary">
-										<p><p>Working in a small team with a clear division of responsibilities. Development of internal system for client;</p></p>
-									</div>
-							</div>
-								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Java developer
-									</div>
-									<div class="company">
-										Autentica
-									</div>
-									<div class="date">
-										<span class="startDate">
-											January 2012
-										</span>
-										<span class="endDate">
-											- September 2014
-										</span>
-									</div>
-								</header>
-
-                                <span class="website">
-                                    <a href="http://www.autentica.lv/">http://www.autentica.lv/</a>
-                                </span>
-
-								<ul class="keywords">
-									<li>Java</li>
-									<li>Ruby</li>
-									<li>SQL</li>
-								</ul>
-
-								<div class="item display none" style="opacity:0">
-									<div class="summary">
-										<p><p>Development of various systems for users.</p></p>
-									</div>
-									<ul class="highlights">
-											<li>Developing new functionalities - back-end and front-end</li>
-											<li>Communicating with customer to provide the best product</li>
-									</ul>
-							</div>
-								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										System administrator
-									</div>
-									<div class="company">
-										Progmeistars
-									</div>
-									<div class="date">
-										<span class="startDate">
-											January 2011
-										</span>
-										<span class="endDate">
-											- January 2017
-										</span>
-									</div>
-								</header>
-
-                                <span class="website">
-                                    <a href="http://www.progmeistars.lv/">http://www.progmeistars.lv/</a>
-                                </span>
-
-								<ul class="keywords">
-									<li>Linux/Unix</li>
-									<li>Windows</li>
-								</ul>
-
-								<div class="item display none" style="opacity:0">
-									<div class="summary">
-										<p><p>Working as technical lead to identify and implement solutions to problems affecting IT services;</p></p>
-									</div>
-									<ul class="highlights">
-											<li>Installation and maintenance all systems</li>
-											<li>Building, configuration and troubleshooting server and desktop hardware</li>
-											<li>Providing consultation and advice on selection IT equipment</li>
-									</ul>
-							</div>
-								<header>
-									<span class="space-left">
-											<span class="fa fa-caret-right"></span>
-									</span>
-									<div class="position">
-										Teacher
-									</div>
-									<div class="company">
-										Progmeistars
-									</div>
-									<div class="date">
-										<span class="startDate">
-											September 2011
-										</span>
-										<span class="endDate">
-											- January 2017
-										</span>
-									</div>
-								</header>
-
-                                <span class="website">
-                                    <a href="http://www.progmeistars.lv/">http://www.progmeistars.lv/</a>
-                                </span>
-
-								<ul class="keywords">
-									<li>Java</li>
-									<li>Teacher</li>
-								</ul>
-
-								<div class="item display none" style="opacity:0">
-									<div class="summary">
-										<p><p>Working with small groups of children up to 12 people. Teaching the basics of programming. Java & c/unix;</p></p>
-									</div>
-									<ul class="highlights">
-											<li>Work with children of different age groups</li>
-											<li>Developing training programs</li>
-									</ul>
-							</div>
-					</section>
-				</section>
-
-
-				<section class="section">
-					<header>
-						<h2 class='section-title'>Education <span class="item-count">(4)</span></h2>
-					</header>
-					<section id="education">
-							<header class="clear">
-								<span class="space-left">
-										<span class="fa fa-caret-down"></span>
-								</span>
-								<div class="header-left">
-										<div class="studyType">
-											Bachelor
-										</div>
-										<div class="area">
-											Business Psychology (incomplete)
-										</div>
-										<div class="institution">
-											RISEBA
-										</div>
-								</div>
-								<div class="date">
-									<span class="startDate">
-										2013
-									</span>
-									<span class="endDate">
-										- 2014
-									</span>
-								</div>
-							</header>
-
-
-
-								<div class="item display" style="opacity:1">
-							</div>
-							<header class="clear">
-								<span class="space-left">
-										<span class="fa fa-caret-right"></span>
-								</span>
-								<div class="header-left">
-										<div class="studyType">
-											Bachelor
-										</div>
-										<div class="area">
-											Information Technology (incomplete)
-										</div>
-										<div class="institution">
-											University of Latvia
-										</div>
-								</div>
-								<div class="date">
-									<span class="startDate">
-										2010
-									</span>
-									<span class="endDate">
-										- 2013
-									</span>
-								</div>
-							</header>
-
-
-                <ul class="courses">
-                    <li>Math</li>
-                    <li>OOP</li>
-                    <li>C/C++</li>
-                </ul>
-
-								<div class="item display none" style="opacity:0">
-							</div>
-							<header class="clear">
-								<span class="space-left">
-										<span class="fa fa-caret-right"></span>
-								</span>
-								<div class="header-left">
-										<div class="studyType">
-											Courses
-										</div>
-										<div class="area">
-											Information Technology
-										</div>
-										<div class="institution">
-											Progmeistars
-										</div>
-								</div>
-								<div class="date">
-									<span class="startDate">
-										2005
-									</span>
-									<span class="endDate">
-										- 2010
-									</span>
-								</div>
-							</header>
-
-
-                <ul class="courses">
-                    <li>OOP</li>
-                    <li>Java</li>
-                    <li>C/Unix</li>
-                </ul>
-
-								<div class="item display none" style="opacity:0">
-							</div>
-							<header class="clear">
-								<span class="space-left">
-										<span class="fa fa-caret-right"></span>
-								</span>
-								<div class="header-left">
-										<div class="studyType">
-											Honorary doctorate
-										</div>
-										<div class="area">
-											Googling Stackoverflow
-										</div>
-										<div class="institution">
-											ARPANET
-										</div>
-								</div>
-								<div class="date">
-									<span class="startDate">
-										1970
-									</span>
-									<span class="endDate">
-										- 2038
-									</span>
-								</div>
-							</header>
-
-
-                <ul class="courses">
-                    <li>Google</li>
-                    <li>Stackoverflow</li>
-                </ul>
-
-								<div class="item display none" style="opacity:0">
-							</div>
-					</section>
-				</section>
-
-
-
-				<section class="section margin1">
-					<header>
-						<h2 class='section-title'>Languages</h2>
-					</header>
-					<section id="languages">
-							<div class="display">
-										<h3 class="language">
-											English
-										</h3>
-								<div class="item">
-								</div>
-							</div>
-							<div class="display">
-										<h3 class="language">
-											Latvian
-										</h3>
-								<div class="item">
-								</div>
-							</div>
-							<div class="display">
-										<h3 class="language">
-											Russian
-										</h3>
-								<div class="item">
-								</div>
-							</div>
-					</section>
-				</section>
-
-
-		</div>
-		<script>
-			(function(){
-				var elements = document.querySelector("#resume");
-
-				// adding the element to the all container
-				// and using event delegation
-				elements.addEventListener("click", function(e) {
-					var current = e.target;
-					// font awesone arrows
-					var arrowRight = current.classList.contains('fa-caret-right');
-					var arrowDown = current.classList.contains('fa-caret-down');
-
-					if(current && current.nodeName == "SPAN" && (arrowRight || arrowDown)) {
-						var header = e.target.parentNode.parentNode;
-						var item = header.nextSibling;
-
-						// select the .item element from the siblings
-						while (!item || !item.classList || !item.classList.contains('item')) {
-							item = item.nextSibling;
-						}
-
-						// hide or show the .item element
-						item.classList.toggle('none');
-
-						// if the .item is going to be shown then imcrease is opacity
-						// every 20 milliseconds to make a fadeIn effect
-						if (!item.classList.contains('none')) {
-							var id = setInterval(function() {
-								item.style.opacity = parseFloat(item.style.opacity) + 0.09;
-								if (parseFloat(item.style.opacity) >= 1) {
-									clearInterval(id);
-								}
-							}, 20);
-						} else {
-							item.style.opacity = 0;
-						}
-
-						current.classList.toggle('fa-caret-right');
-						current.classList.toggle('fa-caret-down');
-					}
-
-				}, false);
-
-				// Make the #resume visible only when the DOM is fully loaded
-				elements.style.opacity = '1';
-			})();
-		</script>
-	</body>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>Aleksandr Anohin</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <style>
+            /********************************************
+            * 	reset from
+            * 	http://meyerweb.com/eric/tools/css/reset/
+            *******************************************/
+            
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td,
+            article,
+            aside,
+            canvas,
+            details,
+            embed,
+            figure,
+            figcaption,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            output,
+            ruby,
+            section,
+            summary,
+            time,
+            mark,
+            audio,
+            video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+            
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+                display: block;
+            }
+            
+            body {
+                line-height: 1;
+            }
+            
+            ol,
+            ul {
+                list-style: none;
+            }
+            
+            blockquote,
+            q {
+                quotes: none;
+            }
+            
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+                content: none;
+            }
+            
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            
+            /****************
+            *	COMMONS
+            ****************/
+            
+            body,
+            html {
+                font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-size: 13px;
+                color: #40484f;
+                font-weight: 400;
+                letter-spacing: 0;
+                line-height: 1.46153846;
+                text-align: left;
+                -webkit-text-size-adjust: 100%;
+            }
+            
+            p {
+                display: block;
+                margin-bottom: 1.3em;
+            }
+            
+            a {
+                color: #0095ff;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                color: #0c65a5;
+                text-decoration: underline;
+            }
+            
+            ul {
+                margin-top: 1rem;
+            }
+            
+            li {
+                list-style-type: square;
+                list-style-position: outside;
+                margin-left: 1.3em;
+            }
+            
+            .highlights>li>p {
+                margin-bottom: 0.5em;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.67rem;
+            }
+            
+            h3 {
+                font-size: 1.27rem;
+            }
+            
+            em {
+                color: #757575;
+            }
+            
+            blockquote {
+                margin-bottom: 1em;
+            }
+            
+            strong {
+                font-weight: 700;
+            }
+            
+            
+            /* main container */
+            
+            #resume {
+                padding: 1rem;
+                margin-top: 2rem;
+            }
+            
+            
+            /* every section wrapper */
+            
+            .section {
+                margin-bottom: 1rem;
+            }
+            
+            section .location {
+                margin-right: .5em;
+                color: #606d76;
+                font-weight: 700;
+            }
+            
+            #contact {
+                margin-top: .5rem;
+            }
+            
+            #profiles .item {
+                padding: 0;
+            }
+            
+            #header>#profiles,
+            #header>#contact,
+            #skills,
+            #languages,
+            #interests {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                -webkit-justify-content: flex-start;
+                justify-content: flex-start;
+            }
+            
+            #header>div {
+                line-height: 1.5;
+            }
+            
+            #header>div>div {
+                margin-right: 1.2em;
+            }
+            
+            #header h1.name {
+                font-size: 2.8rem;
+                font-weight: 100;
+                line-height: 100%;
+            }
+            
+            #header h2.label {
+                color: #202931;
+                font-size: 1.47rem;
+                font-weight: 300;
+            }
+            
+            #header .picture {
+                width: 11em;
+                float: right;
+                border-radius: 4px;
+            }
+            
+            .main-summary {
+                background: #f1f8ff;
+                padding: 1.2em 1em;
+                margin-top: 1rem;
+            }
+            
+            .main-summary p {
+                margin: .15em 0 0;
+            }
+            
+            h2.section-title {
+                display: inline-block;
+                background: #fff;
+                padding: 0 1em 0.3em 0;
+                color: #ff6d1f;
+                text-transform: uppercase;
+                font-weight: 600;
+                border: none;
+                font-size: .9rem;
+            }
+            
+            .section>header {
+                position: relative;
+            }
+            
+            .fa {
+                margin-right: 0.25em;
+            }
+            
+            .section>header::after {
+                position: absolute;
+                left: 0;
+                top: .7em;
+                height: 1px;
+                background: #ccc;
+                content: "";
+                width: 100%;
+                z-index: -100;
+                display: block;
+            }
+            
+            .section.main-summary>section {
+                margin: 0;
+            }
+            
+            .section>section>header {
+                font-size: 1.38rem;
+                position: relative;
+                margin-top: .7em;
+            }
+            
+            .section>section>header:first-of-type {
+                margin: 0;
+            }
+            
+            .section>section>header .space-left {
+                position: absolute;
+                left: -1.56rem;
+                top: 5px;
+                color: #aaa;
+                line-height: 1;
+                opacity: 0;
+            }
+            
+            .position,
+            .company,
+            .organization,
+            .institution,
+            .date,
+            .area,
+            .studyType,
+            .title,
+            .awarder {
+                display: inline;
+            }
+            
+            .position,
+            .studyType,
+            .area,
+            .title,
+            .language,
+            .name {
+                font-weight: 600;
+            }
+            
+            .company::before,
+            .institution::before,
+            .organization::before,
+            .awarder::before {
+                content: "at "
+            }
+            
+            .company,
+            .institution,
+            .organization,
+            .awarder {
+                color: #606d76;
+                font-weight: 400;
+            }
+            
+            .section header .date {
+                font-size: 1rem;
+                display: inline-table;
+                padding: .1em 0;
+                font-weight: 600;
+            }
+            
+            ul.keywords,
+            ul.courses {
+                margin-top: .5em;
+            }
+            
+            ul.keywords li,
+            ul.courses li {
+                display: inline-block;
+                margin: 2px 2px 2px 0;
+                padding: 4px 5px 5px;
+                font-size: .9rem;
+                line-height: 1;
+                text-transform: lowercase;
+                color: #3e6d8e;
+                background-color: #dfeaf1;
+                border: 0 solid #dfeaf1;
+                white-space: nowrap;
+            }
+            
+            ul.keywords li:hover,
+            ul.courses li:hover {
+                background: #dfeaf0;
+            }
+            
+            .item {
+                padding: .5em 0;
+            }
+            
+            .gpa {
+                padding-bottom: .5em;
+            }
+            
+            .fa.social {
+                font-size: 1.1em;
+            }
+            
+            
+            /* Social Media Brand Colors */
+            
+            .google-plus {
+                color: #dd4b39;
+            }
+            
+            .tumblr {
+                color: #32506d;
+            }
+            
+            .foursquare {
+                color: #0072b1;
+            }
+            
+            .facebook {
+                color: #3b5998;
+            }
+            
+            .linkedin {
+                color: #007bb6;
+            }
+            
+            .pinterest {
+                color: #cb2027;
+            }
+            
+            .dribbble {
+                color: #ea4c89;
+            }
+            
+            .instagram {
+                color: #517fa4;
+            }
+            
+            .twitter {
+                color: #00aced;
+            }
+            
+            .soundcloud {
+                color: #ff3a00;
+            }
+            
+            .wordpress {
+                color: #21759b;
+            }
+            
+            .youtube {
+                color: #bb0000;
+            }
+            
+            .github {
+                color: #171515;
+            }
+            
+            .stack-overflow {
+                color: #828386;
+                position: relative;
+            }
+            
+            .flickr {
+                color: #ff0084;
+            }
+            
+            .stack-overflow::after {
+                position: absolute;
+                left: 0;
+                content: '\f16c';
+                color: #f68a1f;
+                overflow: hidden;
+                height: 100%;
+            }
+            
+            .telegram {
+                color: #2291c3;
+            }
+            
+            #languages .item,
+            #skills .item,
+            #interests .item {
+                width: 15em;
+                padding: 0 .5em .5em 0;
+                border-bottom: none;
+            }
+            
+            #skills .item {
+                width: 16em;
+            }
+            
+            #skills .item .keywords {
+                width: 15em;
+            }
+            
+            
+            /* Skill chart */
+            
+            .level {
+                margin-bottom: .5em;
+            }
+            
+            .level .bar {
+                border: 1px solid #ddd;
+                display: block;
+                width: 10em;
+                height: 5px;
+                position: relative;
+            }
+            
+            .level .bar::after {
+                position: absolute;
+                content: " ";
+                top: 0;
+                left: 0;
+                background: black;
+                height: 5px;
+            }
+            
+            .level.beginner .bar::after {
+                background: #EB5F51;
+                width: 2.5em;
+            }
+            
+            .level.intermediate .bar::after {
+                background: #ffdf1f;
+                width: 5em;
+            }
+            
+            .level.advanced .bar::after,
+            .level.fluent .bar::after {
+                background: #5CB85C;
+                width: 7.5em;
+            }
+            
+            .level.master .bar::after,
+            .level.native.speaker .bar::after {
+                background: #59C596;
+                width: 10em;
+            }
+            
+            #references .item {
+                padding-left: .5em;
+                border-left: 5px solid #ff6d1f;
+            }
+            
+            .toggle-item {
+              visibility: hidden;
+            }
+            
+            /******************
+            *	HELPER CLASSES
+            ******************/
+            
+            .clear::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            .display {
+                display: block;
+                opacity: 1 !important;
+            }
+            
+            .margin1 {
+                margin-bottom: .5rem;
+            }
+            
+            
+            /****************
+            *		TABLET
+            ****************/
+            
+            @media screen and (min-width: 602px) {
+                #resume {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+            
+            
+            /****************
+            *		LAPTOP
+            ****************/
+            
+            @media screen and (min-width: 1025px) {
+                li {
+                    margin-left: 1.5em;
+                }
+                #resume {
+                    width: 820px;
+                    margin: 2rem auto;      
+                }
+                .section>section>header .space-left {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+                .section>section {
+                    margin-left: 1.67rem;
+                }
+                .toggle-item {
+                    transform: translate(-9999px);
+                }
+                .toggle-item+label {
+                    display: block;
+                    margin-top: -16px;
+                }
+                .toggle-item:checked+label:after {
+                    content: '\f0d7';
+                }
+                .toggle-item+label:after {
+                    float: left;
+                    cursor: pointer;
+                    margin-left: -20px;
+                    color: #aaa;
+                    font-size: 16px;
+                    content: '\f0da';
+                    font-family: Fontawesome;
+                }
+                .toggle-item~.item {
+                    height: 0;
+                    opacity: 0;
+                }
+                .toggle-item:checked~.item {
+                    height: auto;
+                    opacity: 1;
+                    transition: all .5s linear;
+                }
+                .company::before,
+                .institution::before,
+                .organization::before,
+                .awarder::before {
+                    content: "| ";
+                }
+                .header-left {
+                    float: left;
+                    width: 70%;
+                    word-break: normal;
+                }
+                .section header .date {
+                    float: right;
+                    padding: .2em;
+                }
+                .display {
+                    display: none;
+                }
+                .display:not(.none) {
+                    display: block;
+                }
+            }
+            
+            @media print {
+                #resume {
+                    margin: 0;
+                    padding: 0;
+                    -ms-word-wrap: break-word;
+                    word-wrap: break-word;
+                    line-height: 1.3;
+                    /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
+                }
+                @page {
+                    margin: 1cm 1.4cm;
+                }
+                .item-count {
+                    display: none;
+                }
+                .company::before,
+                .institution::before,
+                .organization::before,
+                .awarder::before {
+                    content: "at ";
+                }
+                .main-summary {
+                    padding: 2rem 0;
+                }
+                .section {
+                    margin: .8rem 0;
+                    padding: 0;
+                }
+                .section header {
+                    padding-bottom: .15rem;
+                }
+                .section .location {
+                    padding-bottom: .15rem;
+                }
+                .stack-overflow::after {
+                    content: "";
+                }
+                .fa.social {
+                    color: #828386;
+                }
+                ul {
+                    margin-top: .4em;
+                }
+                ul,
+                li {
+                    padding: 0;
+                }
+                ul.keywords li,
+                ul.courses li {
+                    margin: 0;
+                    padding: 0;
+                    font-size: .8rem;
+                    text-transform: lowercase;
+                }
+                ul.keywords li::after,
+                ul.courses li::after {
+                    padding: 0 0 0 .1rem;
+                    content: " |";
+                }
+                ul.keywords::before,
+                ul.courses::before {
+                    font-size: .8rem;
+                    font-weight: 600;
+                }
+                ul.keywords::before {
+                    content: "Skills acquired: ";
+                }
+                #skills .keywords::before {
+                    content: '';
+                }
+                .section p {
+                    margin: 0;
+                    padding: 0;
+                }
+                ul.courses::before {
+                    content: "Major courses: ";
+                }
+                ul.keywords li:last-of-type::after,
+                ul.courses li:last-of-type::after {
+                    content: "";
+                }
+                .level em {
+                    font-style: normal;
+                    padding: .1em 0;
+                }
+                .level .bar {
+                    display: none;
+                }
+                #profiles .item {
+                    padding: 0;
+                }
+                .item.display {
+                    display: block;
+                    opacity: 1 !important;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="resume">
+            <header id="header" class="clear">
+                <img class="picture" src="pics/aaa.jpeg" alt="Aleksandr Anohin" />
+                <div class="middle">
+                    	<h1 class="name">Aleksandr Anohin</h1>
+
+                    	<h2 class="label">Software developer</h2>
+
+                </div>	<span class="location">
+    			<span class="city">Riga,</span> 	<span class="region">Latvia</span> 
+                <span
+                class="countryCode">LV</span>
+                    </span>
+                    <div id="contact">
+                        <div class="website">	<span class="fa fa-external-link"></span>
+	<a target="_blank" target="_blank"
+                            href="http://www.aan.lv">http://www.aan.lv</a>
+
+                        </div>
+                        <div class="email">	<span class="fa fa-envelope-o"></span>
+	<a href="mailto:a06kin@gmail.com">a06kin@gmail.com</a>
+
+                        </div>
+                        <div class="phone">	<span class="fa fa-mobile"></span>
+	<a href="tel:(+371) 26119258">(+371) 26119258</a>
+
+                        </div>
+                    </div>
+                    <div id="profiles">
+                        <div class="item">
+                            <div class="username">	<span class="fa fa-github github social"></span>
+	<span class="url">
+    						<a target="_blank" href="https://github.com/a06kin">a06kin</a>
+    					</span> 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="username">	<span class="fa fa-check check social"></span>
+	<span class="url">
+    						<a target="_blank" href="https://keybase.io/aaa">aaa</a>
+    					</span> 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="username">	<span class="fa fa-linkedin linkedin social"></span>
+	<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/aanohin">aanohins</a>
+    					</span> 
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="username">	<span class="fa fa-download download social"></span>
+	<span class="url">
+    						<a target="_blank" href="http://www.aan.lv/cv.pdf">download</a>
+    					</span> 
+                            </div>
+                        </div>
+                    </div>
+            </header>
+            <section class="section main-summary">
+                <section>
+                    <div>
+                        <p>Computational neuroscience, machine learning, functional programming it
+                            is only a small part of what I&#39;m interested in free time. If you have
+                            cool challenges on this subjects - please contact me. Otherwise - I&#39;m
+                            a good java software developer;</p>
+                    </div>
+                </section>
+            </section>
+            <section class="section">
+                <header>
+                     <h2 class='section-title'>Work Experience <span class="item-count">(6)</span></h2>
+
+                </header>
+                <section id="work">
+                    <section class="work-item">
+                        <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked"
+                        />
+                        <label for="work-item-0"></label>
+                        <header>
+                            <div class="position">Software engineer</div>
+                            <div class="company">Neueda</div>
+                            <div class="date"> <span class="startDate">January 2018</span> 	<span class="endDate">- Current</span>
+
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="https://www.neueda.com/">https://www.neueda.com/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Java</li>
+                            <li>Kotlin</li>
+                            <li>TypeScript</li>
+                            <li>JS/HTML/CSS</li>
+                            <li>Node/Electron</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Working in team (10+) with other developers on different projects</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Developing Neo4j Desktop. A convenient way for developers to work with
+                                        local Neo4j databases</p>
+                                </li>
+                                <li>
+                                    <p>Developing plugins for the Neo4j Desktop</p>
+                                </li>
+                                <li>
+                                    <p>Sprint planing (with client and with a team)</p>
+                                </li>
+                                <li>
+                                    <p>Demo and discussions with a client</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="work-item">
+                        <input id="work-item-1" type="checkbox" class="toggle-item" />
+                        <label for="work-item-1"></label>
+                        <header>
+                            <div class="position">Java developer</div>
+                            <div class="company">Skywind group</div>
+                            <div class="date"> <span class="startDate">May 2015</span> 	<span class="endDate">- January 2018</span> 
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="http://www.skywindgroup.com/">http://www.skywindgroup.com/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Java</li>
+                            <li>Scala</li>
+                            <li>SQL</li>
+                            <li>TypeScript</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Working in team (20+) with other developers to build technical solutions
+                                        for casino</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Developing new components &amp; functionality to existing systems</p>
+                                </li>
+                                <li>
+                                    <p>Develop the hot-fixfor the production servers</p>
+                                </li>
+                                <li>
+                                    <p>Investigate new tools to the team (migration svn -&gt; git)</p>
+                                </li>
+                                <li>
+                                    <p>Developing new functionalities - back-end and front-end</p>
+                                </li>
+                                <li>
+                                    <p>Quick deployment and patching projects from other teams</p>
+                                </li>
+                                <li>
+                                    <p>Writing unit tests</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="work-item">
+                        <input id="work-item-2" type="checkbox" class="toggle-item" />
+                        <label for="work-item-2"></label>
+                        <header>
+                            <div class="position">Java developer</div>
+                            <div class="company">Tarento Latvia</div>
+                            <div class="date"> <span class="startDate">March 2015</span> 	<span class="endDate">- May 2015</span> 
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="http://www.qube.lv/">http://www.qube.lv/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Java</li>
+                            <li>JavaFX</li>
+                            <li>SQL</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Working in a small team (3 dev) to build internal system for client -
+                                        the worldwide leader in milking equipment for dairy farmers.</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Developing UI for the client</p>
+                                </li>
+                                <li>
+                                    <p>Sprint planning</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="work-item">
+                        <input id="work-item-3" type="checkbox" class="toggle-item" />
+                        <label for="work-item-3"></label>
+                        <header>
+                            <div class="position">Java developer</div>
+                            <div class="company">Autentica</div>
+                            <div class="date"> <span class="startDate">January 2012</span> 	<span class="endDate">- September 2014</span> 
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="http://www.autentica.lv/">http://www.autentica.lv/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Java</li>
+                            <li>Ruby</li>
+                            <li>SQL</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Development of various systems for users.</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Developing new functionalities - back-end and front-end</p>
+                                </li>
+                                <li>
+                                    <p>Communicating with customer to provide the best product</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="work-item">
+                        <input id="work-item-4" type="checkbox" class="toggle-item" />
+                        <label for="work-item-4"></label>
+                        <header>
+                            <div class="position">Teacher</div>
+                            <div class="company">Progmeistars</div>
+                            <div class="date"> <span class="startDate">September 2011</span> 	<span class="endDate">- January 2017</span> 
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="http://www.progmeistars.lv/">http://www.progmeistars.lv/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>Teacher</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Working with small groups of children up to 12. Teaching the basics of
+                                        programming. Java &amp; c/unix</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Work with children of different age groups</p>
+                                </li>
+                                <li>
+                                    <p>Developing training programs</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="work-item">
+                        <input id="work-item-5" type="checkbox" class="toggle-item" />
+                        <label for="work-item-5"></label>
+                        <header>
+                            <div class="position">System administrator</div>
+                            <div class="company">Progmeistars</div>
+                            <div class="date"> <span class="startDate">January 2011</span> 	<span class="endDate">- January 2017</span> 
+                            </div>
+                        </header>	<span class="website">
+        		<a target="_blank" href="http://www.progmeistars.lv/">http://www.progmeistars.lv/</a>
+        	</span> 
+                        <ul class="keywords">
+                            <li>Unix</li>
+                            <li>Windows</li>
+                        </ul>
+                        <div class="item" id="work-item">
+                            <div class="summary">
+                                <p>
+                                    <p>Working as technical lead to identify and implement solutions to problems
+                                        affecting IT services</p>
+                                </p>
+                            </div>
+                            <ul class="highlights">
+                                <li>
+                                    <p>Installation and maintenance all systems</p>
+                                </li>
+                                <li>
+                                    <p>Building, configuration and troubleshooting server and desktop hardware</p>
+                                </li>
+                                <li>
+                                    <p>Providing consultation and advice on selection IT equipment</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="section">
+                <header>
+                     <h2 class='section-title'>Education <span class="item-count">(4)</span></h2>
+
+                </header>
+                <section id="education">
+                    <section class="education-item">
+                        <header>
+                            <div class="header-left">
+                                <div class="studyType">Bachelor</div>
+                                <div class="area">Business Psychology (incomplete)</div>
+                                <div class="institution">RISEBA</div>
+                            </div>
+                            <div class="date"> <span class="startDate">
+              2013
+              </span>
+ <span class="endDate">
+              - 2014
+              </span>
+
+                            </div>
+                        </header>
+                        <ul class="courses">
+                            <li>Psychology</li>
+                            <li>Economics</li>
+                        </ul>
+                        <div class="item"></div>
+                    </section>
+                    <section class="education-item">
+                        <header>
+                            <div class="header-left">
+                                <div class="studyType">Bachelor</div>
+                                <div class="area">Information Technology (incomplete)</div>
+                                <div class="institution">University of Latvia</div>
+                            </div>
+                            <div class="date"> <span class="startDate">
+              2010
+              </span>
+ <span class="endDate">
+              - 2013
+              </span>
+
+                            </div>
+                        </header>
+                        <ul class="courses">
+                            <li>Math</li>
+                            <li>OOP</li>
+                            <li>C/C++</li>
+                        </ul>
+                        <div class="item"></div>
+                    </section>
+                    <section class="education-item">
+                        <header>
+                            <div class="header-left">
+                                <div class="studyType">Courses</div>
+                                <div class="area">Information Technology</div>
+                                <div class="institution">Progmeistars</div>
+                            </div>
+                            <div class="date"> <span class="startDate">
+              2005
+              </span>
+ <span class="endDate">
+              - 2010
+              </span>
+
+                            </div>
+                        </header>
+                        <ul class="courses">
+                            <li>OOP</li>
+                            <li>Java</li>
+                            <li>C/Unix</li>
+                        </ul>
+                        <div class="item"></div>
+                    </section>
+                    <section class="education-item">
+                        <header>
+                            <div class="header-left">
+                                <div class="studyType">Honorary doctorate</div>
+                                <div class="area">Googling Stackoverflow</div>
+                                <div class="institution">ARPANET</div>
+                            </div>
+                            <div class="date"> <span class="startDate">
+              1970
+              </span>
+ <span class="endDate">
+              - 2038
+              </span>
+
+                            </div>
+                        </header>
+                        <ul class="courses">
+                            <li>Google</li>
+                            <li>Stackoverflow</li>
+                        </ul>
+                        <div class="item"></div>
+                    </section>
+                </section>
+            </section>
+            <section class="section margin1">
+                <header>
+                     <h2 class='section-title'>Languages</h2>
+
+                </header>
+                <section id="languages">
+                    <div class="display">
+                         <h3 class="language">
+            English
+          </h3>
+
+                        <div class="item">
+                            <div class="level fluency advanced"> <em>advanced</em>
+
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display">
+                         <h3 class="language">
+            Latvian
+          </h3>
+
+                        <div class="item">
+                            <div class="level fluency advanced"> <em>advanced</em>
+
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="display">
+                         <h3 class="language">
+            Russian
+          </h3>
+
+                        <div class="item">
+                            <div class="level fluency native speaker"> <em>Native speaker</em>
+
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="section margin1">
+                <header>
+                     <h2 class='section-title' class='section-title'>Interests</h2>
+
+                </header>
+                <section id="interests">
+                    <div class="item">
+                         <h3 class="name">
+            Dancing
+          </h3>
+
+                        <ul class="keywords">
+                            <li>Salsa</li>
+                            <li>Tango</li>
+                            <li>Bachata</li>
+                            <li>Kizomba</li>
+                            <li>Cha-cha</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3 class="name">
+            FPV
+          </h3>
+
+                        <ul class="keywords">
+                            <li>Drones</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+    </body>
 
 </html>
